@@ -6,13 +6,18 @@
   --tertiary-color: #fff;
 }
 
+* {
+  font-family: "Square Peg", cursive;
+  color: var(--secondary-color);
+}
+
 img {
   opacity: .9;
 }
 
-* {
-  font-family: "Square Peg", cursive;
-  color: var(--secondary-color);
+h1 {
+  font-size: 2em;
+  margin-block: .67em;
 }
 body {
   background: url(../images/AdobeStock_307060770.jpeg);
