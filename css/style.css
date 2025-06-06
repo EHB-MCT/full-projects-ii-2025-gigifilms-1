@@ -21,7 +21,7 @@ h1 {
 }
 body {
   background: url(../images/bg.jpeg);
-
+  margin: 0%;
   &::after {
     content: "";
     position: fixed;
@@ -99,7 +99,21 @@ input[type="radio"]:checked {
 }
 
 .nav {
+  background-color: #eadbbb;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
   img {
     width: 5%;
+  }
+}
+
+.wrapper {
+  margin: 40px;
+  display: flex;
+  .imagesHomepage {
+    img {
+      width: 35%;
+    }
   }
 }
