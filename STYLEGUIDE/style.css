@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Square+Peg&display=swap');
+
+:root {
+  --primary-color: #cecece;
+  --secondary-color: #000;
+  --tertiary-color: #fff;
+}
+
+* {
+  font-family: "Square Peg", cursive;
+  color: var(--secondary-color);
+}
+
+img {
+  opacity: .9;
+}
+
+h1 {
+  font-size: 2em;
+  margin-block: .67em;
+}
+body {
+  background: url(../images/bg.jpeg);
+
+  &::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    opacity: 0.7;
+    background: var(--primary-color);
+  }
+}
+.input {
+  padding: 20px 30px;
+  font-size: 25px;
+  background: url(../images/input.png);
+  background-size: 140% 130%;
+  background-position: 30% center;
+  background-repeat: no-repeat;
+  width: fit-content;
+  display: inline-block;
+  overflow: visible;
+
+  select,
+  textarea,
+  input {
+    all: unset;
+  }
+}
+button {
+  border: unset;
+  outline: unset;
+  padding: 20px 30px;
+  font-size: 25px;
+  background: url(../images/input.png);
+  background-size: 120% 110%;
+  background-position: 10% center;
+  background-repeat: no-repeat;
+  color: var(--secondary-color);
+  transition: border-radius .5s;
+}
+.input:has(textarea:hover),
+.input:has(textarea:focus-visible),
+.input:has(input:hover),
+.input:has(input:focus-visible),
+button.active,
+button.hover,
+button:hover {
+  border-radius: 8px;
+  filter: invert(1);
+  color: white;
+}
+label:has(input[type="checkbox"]),
+label:has(input[type="radio"]) {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+}
+input[type="checkbox"],
+input[type="radio"] {
+  all: unset;
+
+  &::before {
+    content: "";
+    display: block;
+    width: 21px;
+    aspect-ratio: 1/1;
+    background-image: url(../images/checkbox.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+}
+input[type="checkbox"]:checked,
+input[type="radio"]:checked {
+  &::before {
+    background-image: url(../images/checkbox_checked.png);
+  }
+}
