@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Square+Peg&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Square+Peg&display=swap");
 
 :root {
   --primary-color: #cecece;
@@ -12,12 +12,12 @@
 }
 
 img {
-  opacity: .9;
+  opacity: 0.9;
 }
 
 h1 {
   font-size: 2em;
-  margin-block: .67em;
+  margin-block: 0.67em;
 }
 body {
   background: url(../images/bg.jpeg);
@@ -58,7 +58,7 @@ button {
   background-position: 10% center;
   background-repeat: no-repeat;
   color: var(--secondary-color);
-  transition: border-radius .5s;
+  transition: border-radius 0.5s;
 }
 .input:has(textarea:hover),
 .input:has(textarea:focus-visible),
@@ -95,5 +95,11 @@ input[type="checkbox"]:checked,
 input[type="radio"]:checked {
   &::before {
     background-image: url(../images/checkbox_checked.png);
+  }
+}
+
+.nav {
+  img {
+    width: 5%;
   }
 }
