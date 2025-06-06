@@ -20,7 +20,7 @@ h1 {
   margin-block: .67em;
 }
 body {
-  background: url(../images/AdobeStock_307060770.jpeg);
+  background: url(../images/bg.jpeg);
 
   &::after {
     content: "";
@@ -34,7 +34,7 @@ body {
 .input {
   padding: 20px 30px;
   font-size: 25px;
-  background: url(../images/Circle_potlood.png);
+  background: url(../images/input.png);
   background-size: 140% 130%;
   background-position: 30% center;
   background-repeat: no-repeat;
@@ -53,7 +53,7 @@ button {
   outline: unset;
   padding: 20px 30px;
   font-size: 25px;
-  background: url(../images/Circle_potlood.png);
+  background: url(../images/input.png);
   background-size: 120% 110%;
   background-position: 10% center;
   background-repeat: no-repeat;
@@ -70,4 +70,30 @@ button:hover {
   border-radius: 8px;
   filter: invert(1);
   color: white;
+}
+label:has(input[type="checkbox"]),
+label:has(input[type="radio"]) {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+}
+input[type="checkbox"],
+input[type="radio"] {
+  all: unset;
+
+  &::before {
+    content: "";
+    display: block;
+    width: 21px;
+    aspect-ratio: 1/1;
+    background-image: url(../images/checkbox.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+}
+input[type="checkbox"]:checked,
+input[type="radio"]:checked {
+  &::before {
+    background-image: url(../images/checkbox_checked.png);
+  }
 }
