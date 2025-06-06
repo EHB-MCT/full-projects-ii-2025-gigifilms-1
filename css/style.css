@@ -110,10 +110,12 @@ input[type="radio"]:checked {
 
 .wrapper {
   margin: 40px;
-  display: flex;
-  .imagesHomepage {
-    img {
-      width: 35%;
+  .home {
+    display: flex;
+    .imagesHomepage {
+      img {
+        width: 35%;
+      }
     }
   }
 }
