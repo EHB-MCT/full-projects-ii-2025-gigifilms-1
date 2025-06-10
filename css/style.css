@@ -64,6 +64,10 @@ html header {
       height: fit-content;
     }
   }
+  .account-buttons {
+    justify-content: end;
+    gap: 7px;
+  }
 }
 
 .wrapper {
