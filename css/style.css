@@ -74,6 +74,12 @@ html header {
   filter:  brightness(45%) sepia(100) saturate(90) hue-rotate(45deg);
 }
 
+@media (max-width: 400px) {
+  html header {
+    height: 80px;
+  }
+}
+
 .wrapper {
   margin: 40px auto;
   width: calc(100% - 80px);
