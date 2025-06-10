@@ -6,7 +6,6 @@
 }
 
 * {
-  font-family: "Inter", sans-serif;
   color: var(--secondary-color);
 }
 
@@ -14,10 +13,6 @@ img {
   opacity: .9;
 }
 
-h1 {
-  font-size: 2em;
-  margin-block: .67em;
-}
 body {
   background: var(--bg-color);
 }
