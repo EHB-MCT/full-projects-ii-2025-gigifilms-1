@@ -81,8 +81,14 @@ html header {
     font-size: 12px;
     align-items: center;
 
-    span {
+    a {
       height: fit-content;
+      text-decoration: none;
+    }
+    a:has(svg) {
+      height: 100%;
+      aspect-ratio: 1/1;
+      width: unset;
     }
   }
   .account-buttons {
@@ -176,13 +182,4 @@ html header {
   margin: 40px auto;
   width: calc(100% - 80px);
   max-width: 1200px;
-
-  .home {
-    display: flex;
-    .imagesHomepage {
-      img {
-        width: 35%;
-      }
-    }
-  }
 }
