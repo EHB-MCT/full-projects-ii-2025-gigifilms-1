@@ -1,8 +1,9 @@
-.home {
-  display: flex;
-  .imagesHomepage {
-    img {
-      width: 35%;
-    }
-  }
+.our_work > div:not(.text) {
+  width: 80%;
+}
+.our_work > .text {
+  width: 70%;
+}
+.our_work > .text:first-child {
+  width: 50%;
 }
