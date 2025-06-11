@@ -7,10 +7,6 @@
   padding: 0 0 0 40px;
   box-sizing: border-box;
 }
-.grid.text.inverse {
-  grid-template-columns: 1fr auto;
-  padding: 0 40px 0 0;
-}
 .grid.single {
   grid-template-columns: 1fr;
 }
@@ -68,5 +64,11 @@
     img {
       width: 200px;
     }
+  }
+  .grid.text {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr auto;
+    padding: 0;
+    margin: 0 20px;
   }
 }

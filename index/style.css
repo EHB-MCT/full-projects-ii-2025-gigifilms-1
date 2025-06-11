@@ -67,17 +67,8 @@
   max-width: unset;
   padding: 40px 0;
 
-  .wrapper {
-    margin: auto;
-    width: calc(100% - 80px);
-    max-width: 1200px;
-
-    & > * {
-      margin: 0;
-      width: 100%;
-    }
-  }
-  * {
+  h1,
+  span {
     color: var(--secondary-text-color);
   }
   button {
