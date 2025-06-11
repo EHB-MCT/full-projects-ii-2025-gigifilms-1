@@ -1,6 +1,6 @@
 :root {
   --bg-color: #000;
-  --primary-color: #862B26;
+  --primary-color: #8A0016;
   --secondary-color: #EADBBB;
   --tertiary-color: #fff;
 }
@@ -38,15 +38,36 @@ button:where(:active, :hover, .active, .hover) {
 }
 
 html header {
-  background-color: var(--secondary-color);
-  padding: 5px 10px;
-  display: flex;
-  justify-content: space-between;
-  height: 40px;
-  box-sizing: border-box;
-  
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+
+  & > div {
+    position: relative;
+    margin: auto;
+    width: calc(100% - 80px);
+    max-width: 1200px;
+    padding: 5px 10px;
+    display: flex;
+    justify-content: space-between;
+    height: 40px;
+    box-sizing: border-box;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 17.5%;
+      right: 17.5%;
+      height: 1px;
+      background-color: var(--tertiary-color);
+    }
+  }
   * {
-    color: var(--bg-color);
+    color: white;
+    fill: white;
   }
   img {
     width: unset;
@@ -68,6 +89,17 @@ html header {
     justify-content: end;
     gap: 7px;
     padding: 5px 0;
+
+    svg {
+      height: 100%;
+      aspect-ratio: 1/1;
+      width: unset;
+    }
+  }
+  .logo {
+    height: 100%;
+    aspect-ratio: 41/25;
+    width: unset;
   }
 }
 
@@ -114,9 +146,11 @@ html header {
     transform-origin: bottom left;
   }
 }
-@media (max-width: 400px) {
-  html header {
+@media (max-width: 600px) {
+  html header > div {
     height: 60px;
+    margin: 0;
+    width: 100%;
 
     .wrap_hamburger {
       display: flex;
@@ -128,7 +162,6 @@ html header {
       top: 60px;
       flex-direction: column;
       padding: 20px 30px;
-      z-index: 1;
       right: 0;
       transform: translateX(100%);
       transition: transform .2s;
