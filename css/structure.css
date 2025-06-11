@@ -46,3 +46,27 @@
   justify-content: center;
   align-content: center;
 }
+.hori-scroll {
+  overflow: scroll hidden;
+
+  img {
+    width: 300px;
+    aspect-ratio: 3/2;
+  }
+}
+.scrollsnap {
+  scroll-snap-type: x mandatory;
+
+  & > * {
+    scroll-snap-align: start;
+  }
+}
+@media (max-width: 600px) {
+  .hori-scroll {
+    overflow: scroll hidden;
+
+    img {
+      width: 200px;
+    }
+  }
+}

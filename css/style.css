@@ -130,8 +130,8 @@ html footer {
 }
 
 .wrap_hamburger {
-  width: 40px;
-  height: 40px;
+  width: 24px;
+  aspect-ratio: 1/1;
   display: none;
   justify-content: center;
   align-items: center;
@@ -143,55 +143,64 @@ html footer {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    width: 40px;
-    height: 32px;
+    width: 100%;
+    aspect-ratio: 1/1;
     right: 0;
     align-items: center;
-    transition: padding .2s;
   
     .line {
       background-color: var(--primary-text-color);
       height: 4px;
-      width: 40px;
+      width: 100%;
       transform-origin: left;
       transition: transform-origin .2s, transform 0.2s, opacity 0.2s, width .2s;
     }
   }
-  .toggle:checked + .lbl_toggle {
-    padding-left: 2px;
-  }
   .toggle:checked + .lbl_toggle .line.l1 {
-    transform: rotate(45deg);
+    transform: rotate(45deg) translateX(3px);
     transform-origin: top left;
   }
   .toggle:checked + .lbl_toggle .line.l2 {
     opacity: 0;
   }
   .toggle:checked + .lbl_toggle .line.l3 {
-    transform: rotate(-45deg);
+    transform: rotate(-45deg) translateX(3px);
     transform-origin: bottom left;
   }
 }
+header + .wrapper {
+  margin-top: 40px;
+}
+.wrapper {
+  margin: auto;
+  width: calc(100% - 80px);
+  max-width: 1200px;
+}
 @media (max-width: 600px) {
   html header > div {
-    height: 60px;
+    height: 48px;
     margin: 0;
     width: 100%;
 
+    &::after {
+      display: none;
+    }
+    .account-buttons {
+      gap: 20px;
+    }
     .wrap_hamburger {
       display: flex;
     }
     .text {
-      position: absolute;
+      position: fixed;
       background: var(--primary-bg-color);
-      height: calc(100vh - 60px);
-      top: 60px;
+      height: calc(100vh - 48px);
+      top: 48px;
       flex-direction: column;
       padding: 20px 30px;
       right: 0;
       transform: translateX(100%);
       transition: transform .2s;
-
 
       &::after {
         content: "";
@@ -207,12 +216,7 @@ html footer {
       transform: translateX(0);
     }
   }
-}
-header + .wrapper {
-  margin-top: 40px;
-}
-.wrapper {
-  margin: auto;
-  width: calc(100% - 80px);
-  max-width: 1200px;
+  .wrapper {
+    width: 100%;
+  }
 }

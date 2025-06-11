@@ -1,4 +1,4 @@
-.wrapper > div:not(.text) {
+.wrapper > div:not(.text, .hori-scroll, .contains-logo) {
   width: 80%;
 }
 :where(.wrapper) .text {
@@ -45,6 +45,20 @@
     align-self: center;
   }
 }
+.contains-logo {
+  .logo {
+    height: 100px;
+    aspect-ratio: 41/25;
+    width: unset;
+    margin: auto;
+  }
+}
+.margin-50 {
+  margin-left: 150px;
+}
+.width-10_14 {
+  width: calc(100% * 10 / 14);
+}
 .our_work,
 .newsletter {
   background: var(--secondary-bg-color);
@@ -68,5 +82,28 @@
   }
   button {
     color: var(--primary-text-color);
+  }
+}
+@media (max-width: 600px) {
+  .margin-50 {
+    margin-left: -50px;
+  }
+  html .contains-logo {
+    margin-left: -150px;
+    flex-direction: column;
+
+    .logo {
+      order: -1;
+      margin: 0;
+      width: fit-content;
+      align-self: center;
+      margin-left: 150px;
+    }
+    .width-10_14 {
+      width: 100%;
+    }
+  }
+  .flex.row:has(+ .flex.center) {
+    order: 1;
   }
 }
