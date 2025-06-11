@@ -23,9 +23,17 @@ textarea,
 input:not([type="radio"], [type="checkbox"]),
 button {
   all: unset;
+  position: relative;
   background-color: var(--primary-color);
   transition: border-radius .5s;
   padding: 10px 20px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: url(../images/Button_texture.png);
+  }
 }
 select {
   appearance: auto;
