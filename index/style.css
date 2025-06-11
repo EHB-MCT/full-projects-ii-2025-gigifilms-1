@@ -1,4 +1,4 @@
-.wrapper > div:not(.text, .hori-scroll, .contains-logo) {
+.wrapper > div:not(.text, .hori-scroll, .contains-logo, .gigifilms) {
   width: 80%;
 }
 :where(.wrapper) .text {
@@ -96,5 +96,18 @@
   }
   .flex.row:has(+ .flex.center) {
     order: 1;
+  }
+  .grid.gigifilms {
+    grid-template-columns: 1fr;
+    grid-template-rows: unset;
+
+    span,
+    img {
+      grid-column: unset;
+      grid-row: unset;
+    }
+    span {
+      margin: 0 20px;
+    }
   }
 }
