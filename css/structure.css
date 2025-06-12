@@ -95,6 +95,10 @@
   }
   .hori-scroll {
     overflow: scroll hidden;
+
+    img {
+      height: 18vh;
+    }
   }
   .grid.text {
     grid-template-columns: 1fr;

@@ -10,6 +10,10 @@
 }
 :where(.our_work, .newsletter) .text:first-child {
   max-width: 550px;
+
+  span {
+    font-weight: 600;
+  }
 }
 html header > div::after {
   content: "";
