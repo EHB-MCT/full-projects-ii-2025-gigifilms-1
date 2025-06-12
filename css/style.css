@@ -1,12 +1,15 @@
 :root {
-  --bg-color: #000;
-  --primary-color: #8A0016;
-  --secondary-color: #EADBBB;
-  --tertiary-color: #fff;
+  --primary-bg-color: #000;
+  --secondary-bg-color: #ecede8;
+  --header-bg: #000;
+  --primary-text-color: #fff;
+  --secondary-text-color: #000;
+  --accent-color: #8A0016;
 }
 
 * {
-  color: var(--secondary-color);
+  color: var(--primary-text-color);
+  fill: var(--primary-text-color);
 }
 
 img {
@@ -15,30 +18,62 @@ img {
 }
 
 body {
-  background: var(--bg-color);
+  background: var(--primary-bg-color);
 }
-select,
-textarea,
-input:not([type="radio"], [type="checkbox"]),
+body:has(header .toggle:checked) {
+  overflow: hidden;
+}
 button {
   all: unset;
-  background-color: var(--primary-color);
+  position: relative;
+  background-color: var(--accent-color);
+  color: var(--primary-text-color);
   transition: border-radius .5s;
-  padding: 5px 10px;
+  padding: 10px 20px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url(../images/Button_texture.png);
+    background-size: 200%;
+    opacity: 0.5;
+  }
+}
+button {
+  width: 152px;
+  aspect-ratio: 190/70;
+  text-align: center;
+  font-size: 26px;
+  box-sizing: border-box;
+  font-family: "acumin-pro-extra-condensed",sans-serif;
+  font-weight: 600;
+  font-style: normal;
 }
 select {
   appearance: auto;
 }
-select:where(:hover, :open),
-textarea:where(:hover, :focus-within),
+select,
+textarea,
+input:not([type="radio"], [type="checkbox"]) {
+  border: 0;
+  border-radius: 0;
+  padding: 5px 10px;
+  outline: unset;
+  caret-color: var(--secondary-text-color);
+  color: var(--secondary-text-color);
+  width: 100%;
+  box-sizing: border-box;
+}
 input:not([type="radio"], [type="checkbox"]):where(:hover, :focus-within),
-button:where(:active, :hover, .active, .hover) {
-  border-radius: 8px;
-  color: var(--tertiary-color);
+button:where(:active, .active, :hover, .hover) {
+  background-color: var(--secondary-bg-color);
+  color: var(--secondary-text-color);
 }
 
 html header {
-  position: fixed;
+  background-color: var(--header-bg);
+  position: sticky;
   top: 0;
   left: 0;
   right: 0;
@@ -50,24 +85,8 @@ html header {
     width: calc(100% - 80px);
     max-width: 1200px;
     padding: 5px 10px;
-    display: flex;
-    justify-content: space-between;
     height: 40px;
     box-sizing: border-box;
-
-    &::after {
-      content: "";
-      position: absolute;
-      bottom: 0;
-      left: 17.5%;
-      right: 17.5%;
-      height: 1px;
-      background-color: var(--tertiary-color);
-    }
-  }
-  * {
-    color: white;
-    fill: white;
   }
   img {
     width: unset;
@@ -75,15 +94,30 @@ html header {
   }
   .account-buttons,
   .text {
-    display: flex;
-    flex-direction: row;
-    gap: 20px;
     font-size: 12px;
     align-items: center;
 
     a {
       height: fit-content;
       text-decoration: none;
+      position: relative;
+
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: -2px;
+        left: 0;
+        right: 0;
+        height: 1px;
+        background: var(--secondary-bg-color);
+        transform: scaleX(0);
+        transition: transform .5s;
+      }
+    }
+    a:where(:hover, .active) {
+      &::after {
+        transform: unset;
+      }
     }
     a:has(svg) {
       height: 100%;
@@ -93,7 +127,6 @@ html header {
   }
   .account-buttons {
     justify-content: end;
-    gap: 7px;
     padding: 5px 0;
 
     svg {
@@ -108,10 +141,19 @@ html header {
     width: unset;
   }
 }
+html footer {
+  padding: 40px 0;
+  background-color: var(--primary-bg-color);
+
+  a {
+    height: fit-content;
+    text-decoration: none;
+  }
+}
 
 .wrap_hamburger {
-  width: 40px;
-  height: 40px;
+  width: 24px;
+  aspect-ratio: 1/1;
   display: none;
   justify-content: center;
   align-items: center;
@@ -123,63 +165,80 @@ html header {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    width: 40px;
-    height: 32px;
+    width: 100%;
+    aspect-ratio: 1/1;
     right: 0;
     align-items: center;
-    transition: padding .2s;
   
     .line {
-      background-color: var(--primary-color);
+      background-color: var(--primary-text-color);
       height: 4px;
-      width: 40px;
+      width: 100%;
       transform-origin: left;
       transition: transform-origin .2s, transform 0.2s, opacity 0.2s, width .2s;
     }
   }
-  .toggle:checked + .lbl_toggle {
-    padding-left: 2px;
-  }
   .toggle:checked + .lbl_toggle .line.l1 {
-    transform: rotate(45deg);
+    transform: rotate(45deg) translateX(3px);
     transform-origin: top left;
   }
   .toggle:checked + .lbl_toggle .line.l2 {
     opacity: 0;
   }
   .toggle:checked + .lbl_toggle .line.l3 {
-    transform: rotate(-45deg);
+    transform: rotate(-45deg) translateX(3px);
     transform-origin: bottom left;
   }
 }
+html footer > div,
+.wrapper {
+  margin: auto;
+  width: calc(100% - 80px);
+  max-width: 1200px;
+}
 @media (max-width: 600px) {
   html header > div {
-    height: 60px;
+    height: 48px;
     margin: 0;
     width: 100%;
 
+    &::after {
+      display: none;
+    }
+    .account-buttons {
+      gap: 20px;
+    }
     .wrap_hamburger {
       display: flex;
     }
     .text {
-      position: absolute;
-      background: var(--secondary-color);
-      height: calc(100vh - 60px);
-      top: 60px;
+      position: fixed;
+      background: var(--primary-bg-color);
+      height: calc(100vh - 48px);
+      top: 48px;
       flex-direction: column;
       padding: 20px 30px;
       right: 0;
       transform: translateX(100%);
       transition: transform .2s;
+
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        top: 0;
+        left: 0;
+        width: 1px;
+        background-color: var(--secondary-bg-color);
+      }
     }
     .text:has(+ .account-buttons .toggle:checked) {
       transform: translateX(0);
     }
   }
-}
-
-.wrapper {
-  margin: 40px auto;
-  width: calc(100% - 80px);
-  max-width: 1200px;
+  .wrapper {
+    width: calc(100% - 20px);
+    margin: auto;
+    overflow: hidden;
+  }
 }
