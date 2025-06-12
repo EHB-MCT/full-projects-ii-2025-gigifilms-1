@@ -20,6 +20,9 @@ img {
 body {
   background: var(--primary-bg-color);
 }
+body:has(header .toggle:checked) {
+  overflow: hidden;
+}
 button {
   all: unset;
   position: relative;
