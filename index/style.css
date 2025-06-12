@@ -115,3 +115,7 @@ html header > div::after {
     }
   }
 }
+header + .flex > .wrapper {
+  width: 100%;
+  max-width: 100%;
+}

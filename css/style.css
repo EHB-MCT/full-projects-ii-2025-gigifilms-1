@@ -21,7 +21,6 @@ body {
   background: var(--primary-bg-color);
 }
 select,
-textarea,
 button {
   all: unset;
   position: relative;
@@ -52,6 +51,7 @@ button {
 select {
   appearance: auto;
 }
+textarea,
 input:not([type="radio"], [type="checkbox"]) {
   border: 0;
   border-radius: 0;
@@ -59,9 +59,10 @@ input:not([type="radio"], [type="checkbox"]) {
   outline: unset;
   caret-color: var(--secondary-text-color);
   color: var(--secondary-text-color);
+  width: 100%;
+  box-sizing: border-box;
 }
 select:where(:hover, :open),
-textarea:where(:hover, :focus-within),
 input:not([type="radio"], [type="checkbox"]):where(:hover, :focus-within),
 button:where(:active, .active, :hover, .hover) {
   background-color: var(--secondary-bg-color);
@@ -91,15 +92,30 @@ html header {
   }
   .account-buttons,
   .text {
-    display: flex;
-    flex-direction: row;
-    gap: 20px;
     font-size: 12px;
     align-items: center;
 
     a {
       height: fit-content;
       text-decoration: none;
+      position: relative;
+
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: -2px;
+        left: 0;
+        right: 0;
+        height: 1px;
+        background: var(--secondary-bg-color);
+        transform: scaleX(0);
+        transition: transform .5s;
+      }
+    }
+    a:where(:hover, .active) {
+      &::after {
+        transform: unset;
+      }
     }
     a:has(svg) {
       height: 100%;
@@ -109,7 +125,6 @@ html header {
   }
   .account-buttons {
     justify-content: end;
-    gap: 7px;
     padding: 5px 0;
 
     svg {
