@@ -30,6 +30,10 @@ header * {
   .flex {
     align-self: center;
   }
+  .max-80 {
+    max-width: 80%;
+    align-self: flex-start;
+  }
   * {
     color: var(--primary-text-color);
   }
