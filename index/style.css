@@ -97,6 +97,10 @@
   .flex.row:has(+ .flex.center) {
     order: 1;
   }
+  .our_work,
+  .newsletter {
+    padding: 20px 0;
+  }
   .grid.gigifilms {
     grid-template-columns: 1fr;
     grid-template-rows: unset;
