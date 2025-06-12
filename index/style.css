@@ -119,6 +119,31 @@ html header > div::after {
       margin: 0 20px;
     }
   }
+  .wrapper > div.justify-end {
+    width: 100%;
+    justify-content: end;
+
+    img {
+      display: none;
+      height: 18vh;
+      width: unset;
+    }
+    img:first-child {
+      display: block;
+    }
+  }
+  .wrapper > .rupture + .justify-end {
+    justify-content: start;
+  }
+  .wrapper > div.justify-start {
+    width: 100%;
+    overflow: scroll hidden;
+
+    img {
+      height: 18vh;
+      width: unset;
+    }
+  }
 }
 header + .flex > .wrapper {
   width: 100%;
