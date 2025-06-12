@@ -26,6 +26,9 @@
 .row {
   flex-direction: row;
 }
+.wrap {
+  flex-wrap: wrap;
+}
 .gap-10 {
   gap: 10px;
 }
@@ -92,10 +95,6 @@
   }
   .hori-scroll {
     overflow: scroll hidden;
-
-    img {
-      width: 200px;
-    }
   }
   .grid.text {
     grid-template-columns: 1fr;
@@ -117,5 +116,8 @@
       right: 10px;
       bottom: 10px;
     }
+  }
+  .width-10_14.scrollsnap {
+    margin-left: 0;
   }
 }

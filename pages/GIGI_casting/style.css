@@ -1,0 +1,54 @@
+body {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  gap: 30px;
+  background: var(--secondary-bg-color);
+
+  * {
+    color: var(--secondary-text-color);
+  }
+  h1,
+  h2 {
+    color: var(--accent-color);
+  }
+}
+footer *,
+header * {
+  color: var(--primary-text-color);
+}
+.grid.filter_parent {
+  grid-template-columns: 300px 1fr;
+}
+.grid.text:not(#project) {
+  max-width: 650px;
+}
+#project {
+  grid-template-columns: 1fr 2fr;
+  align-self: center;
+  background: var(--primary-bg-color);
+  
+  .flex {
+    align-self: center;
+  }
+  * {
+    color: var(--primary-text-color);
+  }
+}
+#casting_list {
+  --rows: 5;
+}
+#casting_list {
+  grid-template-columns: repeat(var(--rows), 1fr);
+}
+span.active {
+  padding-left: 50px;
+}
+#criteria_list {
+  position: sticky;
+  top: 0;
+}
+#criteria_list select,
+#criteria_list input {
+  border: 1px solid var(--primary-bg-color);
+  background-color: var(--secondary-bg-color);
+}
