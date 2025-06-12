@@ -7,9 +7,11 @@ body {
   * {
     color: var(--secondary-text-color);
   }
-  h1,
   h2 {
     color: var(--accent-color);
+  }
+  h1 {
+    margin-block: 2rem;
   }
 }
 footer *,
@@ -21,6 +23,19 @@ header * {
 }
 .grid.text:not(#project) {
   max-width: 650px;
+}
+#projects {
+  grid-template-columns: 1fr 2fr 2fr 1fr;
+
+  span {
+    text-align: center;
+    text-transform: uppercase;
+    font-family: "field-gothic-condensed",sans-serif;
+    font-size: 20px;
+  }
+  .arrow {
+    font-size: 50px;
+  }
 }
 #project {
   grid-template-columns: 1fr 2fr;
