@@ -4,7 +4,7 @@
   --header-bg: #000;
   --primary-text-color: #fff;
   --secondary-text-color: #000;
-  --primary-color: #8A0016;
+  --accent-color: #8A0016;
 }
 
 * {
@@ -22,11 +22,10 @@ body {
 }
 select,
 textarea,
-input:not([type="radio"], [type="checkbox"]),
 button {
   all: unset;
   position: relative;
-  background-color: var(--primary-color);
+  background-color: var(--accent-color);
   color: var(--primary-text-color);
   transition: border-radius .5s;
   padding: 10px 20px;
@@ -41,17 +40,32 @@ button {
   }
 }
 button {
-  width: 110px;
+  width: 152px;
+  aspect-ratio: 190/70;
   text-align: center;
+  font-size: 26px;
+  box-sizing: border-box;
+  font-family: "acumin-pro-extra-condensed",sans-serif;
+  font-weight: 600;
+  font-style: normal;
 }
 select {
   appearance: auto;
 }
+input:not([type="radio"], [type="checkbox"]) {
+  border: 0;
+  border-radius: 0;
+  padding: 5px 10px;
+  outline: unset;
+  caret-color: var(--secondary-text-color);
+  color: var(--secondary-text-color);
+}
 select:where(:hover, :open),
 textarea:where(:hover, :focus-within),
 input:not([type="radio"], [type="checkbox"]):where(:hover, :focus-within),
-button:where(:active, :hover, .active, .hover) {
-  border-radius: 8px;
+button:where(:active, .active, :hover, .hover) {
+  background-color: var(--secondary-bg-color);
+  color: var(--secondary-text-color);
 }
 
 html header {
@@ -70,16 +84,6 @@ html header {
     padding: 5px 10px;
     height: 40px;
     box-sizing: border-box;
-
-    &::after {
-      content: "";
-      position: absolute;
-      bottom: 0;
-      left: 17.5%;
-      right: 17.5%;
-      height: 1px;
-      background-color: var(--secondary-bg-color);
-    }
   }
   img {
     width: unset;

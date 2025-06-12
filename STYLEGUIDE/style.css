@@ -1,6 +1,6 @@
 :root {
   --bg-color: #000;
-  --primary-color: #862B26;
+  --accent-color: #862B26;
   --secondary-color: #EADBBB;
   --tertiary-color: #fff;
 }
@@ -21,7 +21,7 @@ textarea,
 input:not([type="radio"], [type="checkbox"]),
 button {
   all: unset;
-  background-color: var(--primary-color);
+  background-color: var(--accent-color);
   transition: border-radius .5s;
   padding: 5px 10px;
 }

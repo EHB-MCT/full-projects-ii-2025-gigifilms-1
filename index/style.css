@@ -11,6 +11,15 @@
 :where(.our_work, .newsletter) .text:first-child {
   max-width: 550px;
 }
+html header > div::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 17.5%;
+  right: 17.5%;
+  height: 1px;
+  background-color: var(--secondary-bg-color);
+}
 .gigifilms {
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: repeat(3, 1fr);
@@ -53,12 +62,6 @@
     margin: auto;
   }
 }
-.margin-50 {
-  margin-left: 150px;
-}
-.width-10_14 {
-  width: calc(100% * 10 / 14);
-}
 .our_work,
 .newsletter {
   background: var(--secondary-bg-color);
@@ -76,9 +79,6 @@
   }
 }
 @media (max-width: 600px) {
-  .margin-50 {
-    margin-left: -50px;
-  }
   html .contains-logo {
     margin-left: -150px;
     flex-direction: column;

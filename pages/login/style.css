@@ -1,0 +1,26 @@
+span + a,
+label + a {
+  font-size: 10px;
+  align-self: center;
+}
+.split-70-30 {
+  .logo {
+    width: 200px;
+    aspect-ratio: 41/25;
+    height: unset;
+    align-self: center;
+    padding: 20px 0;
+  }
+}
+.width-10_14.scrollsnap {
+  width: calc(100% + 150px);
+  margin-left: -300px;
+}
+.wrapper {
+  max-width: calc(1200px + calc(calc(100% - 1200px) / 2));
+  margin: 0;
+}
+html header > div {
+  max-width: calc(1200px + calc(calc(100% - 1200px) / 2));
+  margin: 0;
+}

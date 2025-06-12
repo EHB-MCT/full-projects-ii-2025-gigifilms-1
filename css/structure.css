@@ -19,6 +19,9 @@
 .row {
   flex-direction: row;
 }
+.gap-10 {
+  gap: 10px;
+}
 .gap-20 {
   gap: 20px;
 }
@@ -57,7 +60,26 @@
     scroll-snap-align: start;
   }
 }
+.split-70-30 {
+  width: 100%;
+
+  & > *:first-child {
+    width: 70%;
+  }
+  & > *:nth-child(2) {
+    width: 30%;
+  }
+}
+.margin-50 {
+  margin-left: 150px;
+}
+.width-10_14 {
+  width: calc(100% * 10 / 14);
+}
 @media (max-width: 600px) {
+  .margin-50 {
+    margin-left: -50px;
+  }
   .hori-scroll {
     overflow: scroll hidden;
 
@@ -77,7 +99,13 @@
   .gap-30 {
     gap: 20px;
   }
-  footer .logo {
-    display: none;
+  footer {
+    position: relative;
+
+    .logo {
+      position: absolute;
+      right: 10px;
+      bottom: 10px;
+    }
   }
 }
