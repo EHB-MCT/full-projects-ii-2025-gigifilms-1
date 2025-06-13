@@ -11,7 +11,13 @@
   color: var(--primary-text-color);
   fill: var(--primary-text-color);
 }
-
+[popover] {
+  width: calc(100% - 80px);
+  margin: auto;
+  padding: 10px;
+  background-color: var(--primary-bg-color);
+  border: 1px solid var(--secondary-bg-color);
+}
 img {
   opacity: 0.9;
   width: 100%;
@@ -20,6 +26,7 @@ img {
 body {
   background: var(--primary-bg-color);
 }
+body:has([popover]:popover-open),
 body:has(header .toggle:checked) {
   overflow: hidden;
 }
@@ -240,5 +247,9 @@ html footer > div,
     width: calc(100% - 20px);
     margin: auto;
     overflow: hidden;
+  }
+  button {
+    width: 110px;
+    font-size: 16px;
   }
 }

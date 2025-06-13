@@ -83,6 +83,13 @@ html header > div::after {
     color: var(--primary-text-color);
   }
 }
+.text {
+  .justify-between {
+    button {
+      display: none;
+    }
+  }
+}
 @media (max-width: 600px) {
   html .contains-logo {
     margin-left: -150px;
@@ -142,6 +149,16 @@ html header > div::after {
     img {
       height: 18vh;
       width: unset;
+    }
+  }
+  .text {
+    .justify-between {
+      button {
+        display: block;
+      }
+    }
+    .justify-between ~ span {
+      display: none;
     }
   }
 }
