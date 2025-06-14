@@ -203,7 +203,7 @@ html footer > div,
   width: calc(100% - 80px);
   max-width: 1200px;
 }
-@media (max-width: 600px) {
+@media (max-width:600px) {
   html header > div {
     height: 48px;
     margin: 0;

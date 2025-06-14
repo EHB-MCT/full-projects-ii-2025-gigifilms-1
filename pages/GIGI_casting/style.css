@@ -54,10 +54,7 @@ header * {
   }
 }
 #casting_list {
-  --rows: 5;
-}
-#casting_list {
-  grid-template-columns: repeat(var(--rows), 1fr);
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
 }
 #project_list span.active {
   padding-left: 50px;
@@ -74,7 +71,7 @@ header * {
 .filter_parent .toggle {
   display: none;
 }
-@media (max-width:600px) {
+@media (max-width:900px) {
   .grid.filter_parent {
     grid-template-columns: 1fr;
     overflow: hidden;
