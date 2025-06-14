@@ -79,8 +79,9 @@ html header > div::after {
   span {
     color: var(--secondary-text-color);
   }
-  button {
+  button:hover {
     color: var(--primary-text-color);
+    background-color: var(--primary-bg-color);
   }
 }
 .text {
