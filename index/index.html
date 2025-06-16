@@ -20,10 +20,10 @@
         </svg>
       </a>
       <div class="text flex row gap-20">
-        <a href="../pages/our_work/">Our work</a>
-        <a href="../pages/GIGI_casting/">GIGI casting</a>
-        <a href="../pages/about_us/">About us</a>
-        <a href="../pages/contact/">Contact</a>
+        <a aria-label="our_work" href="../pages/our_work/">Our work</a>
+        <a aria-label="gigi_casting" href="../pages/GIGI_casting/">GIGI casting</a>
+        <a aria-label="about_us" href="../pages/about_us/">About us</a>
+        <a aria-label="contact" href="../pages/contact/">Contact</a>
       </div>
       <div id="account_buttons" class="account-buttons flex row gap-20">
         <a href="../pages/login/">
@@ -83,7 +83,6 @@
         <img src="../images/Rupture_AIcha_mist_copyright_BRUZZ_2023.png" />
       </div>
       <div class="flex center gap-20">
-        <button onclick="location.href='../pages/login/'">Log In</button>
         <button>Register</button>
       </div>
     </div>
@@ -91,8 +90,8 @@
   <div class="our_work flex column gap-30 inverse-bg">
     <div class="wrapper flex column gap-30">
       <div class="text grid center gap-20">
-        <h1>Our work</h1>
-        <span>Learn more about passed projects, where GIGI films has collaborated with other artists, new actors and casting directors.</span>
+        <h1 aria-label="our_work">Our work</h1>
+        <span aria-label="our_work_text_homepage">Learn more about passed projects, where GIGI films has collaborated with other artists, new actors and casting directors.</span>
       </div>
       <div class="text grid center gap-20">
         <div class="flex row justify-between">
@@ -158,8 +157,8 @@
   <div class="newsletter flex column gap-30 inverse-bg">
     <div class="wrapper flex column gap-30">
       <div class="text grid center gap-20">
-        <h1>Newsletter</h1>
-        <span>Stay UpToDate with upcoming casting calls and further info on our projects.</span>
+        <h1 aria-label="newsletter">Newsletter</h1>
+        <span aria-label="newsletter_text">Stay UpToDate with upcoming casting calls and further info on our projects.</span>
       </div>
       <div class="flex center">
         <button>Sign up</button>
@@ -169,12 +168,12 @@
   <footer>
     <div class="flex row gap-30 justify-between">
       <div class="flex column gap-20 justify-between">
-        <a href="../pages/our_work/">Our work</a>
-        <a href="../pages/GIGI_casting/">GIGI casting</a>
-        <a href="../pages/about_us/">About us</a>
+        <a aria-label="our_work" href="../pages/our_work/">Our work</a>
+        <a aria-label="gigi_casting" href="../pages/GIGI_casting/">GIGI casting</a>
+        <a aria-label="about_us" href="../pages/about_us/">About us</a>
       </div>
       <div class="flex column gap-20 justify-between">
-        <a href="../pages/our_work/">Contact</a>
+        <a aria-label="contact" href="../pages/our_work/">Contact</a>
         <a href="mailto:#">zohra@gigifilms.be</a>
         <a href="mailto:#">romy@gigifilms.be</a>
         <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -190,5 +189,6 @@
     </div>
   </footer>
   <script src="./functions.js"></script>
+  <script src="../js/index.js"></script>
 </body>
 </html>
