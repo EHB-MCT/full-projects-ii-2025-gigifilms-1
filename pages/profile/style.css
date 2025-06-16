@@ -1,6 +1,9 @@
-.wrapperStroke {
-  background-color: ECEDE8;
-}
 .imgA {
-  max-width: 20%;
+  max-width: 30%;
+}
+
+.textDetailed {
+  input {
+    border: 1px solid black;
+  }
 }
