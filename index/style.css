@@ -1,5 +1,9 @@
 .wrapper > div:not(.text, .hori-scroll, .contains-logo, .gigifilms) {
   width: 80%;
+
+  img {
+    overflow: hidden;
+  }
 }
 :where(.wrapper) .text {
   max-width: 800px;
@@ -24,6 +28,20 @@ html header > div::after {
   right: 17.5%;
   height: 1px;
   background-color: var(--secondary-bg-color);
+  transition: left .2s, right .2s;
+  transition-delay: .2s;
+}
+html header > div .text {
+  a::after {
+    bottom: -12px;
+  }
+}
+html header > div:has(a:hover) {
+  &::after {
+    left: 50%;
+    right: 50%;
+    transition-delay: 0s;
+  }
 }
 .gigifilms {
   grid-template-columns: repeat(12, 1fr);
@@ -69,11 +87,9 @@ html header > div::after {
 }
 .our_work,
 .newsletter {
-  background: var(--secondary-bg-color);
   margin: 0;
   width: 100%;
   max-width: unset;
-  padding: 40px 0;
 
   h1,
   span {
