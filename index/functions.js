@@ -1,4 +1,4 @@
-let pb = 'http://127.0.0.1:8090';
+let pb = 'https://gigifilms1.onrender.com';
 
 async function init() {
   const projectsFetch = await fetch(pb + '/api/collections/projects/records');
