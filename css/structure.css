@@ -41,6 +41,12 @@
 .gap-30 {
   gap: 30px;
 }
+.gap-40 {
+  gap: 40px;
+}
+.gap-50 {
+  gap: 50px;
+}
 .justify-end {
   justify-self: end;
   align-self: end;
@@ -77,6 +83,15 @@
 .column-7-3 {
   width: 100%;
   grid-template-columns: 7fr 3fr;
+
+  & > * {
+    width: 100%;
+    overflow: hidden;
+  }
+}
+.column-3-7 {
+  width: 100%;
+  grid-template-columns: 3fr 7fr;
 
   & > * {
     width: 100%;
