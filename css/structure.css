@@ -80,6 +80,15 @@
     overflow: hidden;
   }
 }
+.column-3-7 {
+  width: 100%;
+  grid-template-columns: 3fr 7fr;
+
+  & > * {
+    width: 100%;
+    overflow: hidden;
+  }
+}
 .margin-50 {
   margin-left: 150px;
 }
