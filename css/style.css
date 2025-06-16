@@ -7,6 +7,13 @@
   --accent-color: #8A0016;
 }
 
+html,
+body {
+  width: 100vw;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
 * {
   color: var(--primary-text-color);
   fill: var(--primary-text-color);
@@ -22,7 +29,6 @@ img {
   opacity: 0.9;
   width: 100%;
 }
-
 body {
   background: var(--primary-bg-color);
 }
@@ -77,7 +83,24 @@ button:where(:active, .active, :hover, .hover) {
   background-color: var(--secondary-bg-color);
   color: var(--secondary-text-color);
 }
+.inverse-bg {
+  background-color: var(--secondary-bg-color);
+  padding: 40px 0;
 
+  * {
+    color: var(--secondary-text-color);
+  }
+  h2 {
+    color: var(--accent-color);
+  }
+  button {
+    color: var(--primary-text-color);
+  }
+  button:hover {
+    color: var(--primary-text-color);
+    background-color: var(--primary-bg-color);
+  }
+}
 html header {
   background-color: var(--header-bg);
   position: sticky;
@@ -118,7 +141,7 @@ html header {
         height: 1px;
         background: var(--secondary-bg-color);
         transform: scaleX(0);
-        transition: transform .5s;
+        transition: transform .2s;
       }
     }
     a:where(:hover, .active) {
@@ -202,6 +225,7 @@ html footer > div,
   margin: auto;
   width: calc(100% - 80px);
   max-width: 1200px;
+  overflow: hidden;
 }
 @media (max-width:600px) {
   html header > div {
