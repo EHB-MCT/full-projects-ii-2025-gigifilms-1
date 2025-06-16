@@ -7,3 +7,15 @@
     border: 1px solid black;
   }
 }
+
+.box {
+  border: 1px solid black;
+  background: var(--secondary-bg-color);
+  max-width: fit-content;
+  padding: 0 1% 0 1%;
+}
+
+.tag {
+  display: flex;
+  gap: 1%;
+}
