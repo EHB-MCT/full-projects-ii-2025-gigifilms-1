@@ -26,6 +26,9 @@
 .row {
   flex-direction: row;
 }
+.row-reverse {
+  flex-direction: row-reverse;
+}
 .wrap {
   flex-wrap: wrap;
 }
@@ -37,6 +40,12 @@
 }
 .gap-30 {
   gap: 30px;
+}
+.gap-40 {
+  gap: 40px;
+}
+.gap-50 {
+  gap: 50px;
 }
 .justify-end {
   justify-self: end;
@@ -98,7 +107,12 @@
 .width-10_14.scrollsnap {
   margin-left: calc(12.5vh / 2 * 3 * -1);
 }
-@media (max-width: 600px) {
+@media (max-width:900px) {
+  .column-7-3 {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width:600px) {
   .margin-50 {
     margin-left: -50px;
   }

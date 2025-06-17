@@ -4,7 +4,14 @@
   --header-bg: #000;
   --primary-text-color: #fff;
   --secondary-text-color: #000;
-  --accent-color: #8a0016;
+  --accent-color: #8A0016;
+}
+
+html,
+body {
+  width: 100vw;
+  min-height: 100vh;
+  box-sizing: border-box;
 }
 
 * {
@@ -22,7 +29,6 @@ img {
   opacity: 0.9;
   width: 100%;
 }
-
 body {
   background: var(--primary-bg-color);
 }
@@ -63,7 +69,8 @@ select {
 select,
 textarea,
 input:not([type="radio"], [type="checkbox"]) {
-  border: 0;
+  border: 1px solid var(--primary-bg-color);
+  background-color: var(--secondary-bg-color);
   border-radius: 0;
   padding: 5px 10px;
   outline: unset;
@@ -135,7 +142,7 @@ html header {
         height: 1px;
         background: var(--secondary-bg-color);
         transform: scaleX(0);
-        transition: transform 0.5s;
+        transition: transform .2s;
       }
     }
     a:where(:hover, .active) {
@@ -220,8 +227,9 @@ html footer > div,
   margin: auto;
   width: calc(100% - 80px);
   max-width: 1200px;
+  overflow: hidden;
 }
-@media (max-width: 600px) {
+@media (max-width:600px) {
   html header > div {
     height: 48px;
     margin: 0;

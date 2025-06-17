@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="../css/reset.css">
   <link rel="stylesheet" href="./style.css">
   <link rel="stylesheet" href="../css/structure.css">
+  <link rel="stylesheet" href="../css/scrollers.css">
 </head>
 
 <body class="flex column gap-30">
@@ -25,17 +26,12 @@
         </svg>
       </a>
       <div class="text flex row gap-20">
-        <a href="../pages/our_work/">Our work</a>
-        <a href="../pages/GIGI_casting/">GIGI casting</a>
-        <a href="../pages/about_us/">About us</a>
-        <a href="../pages/contact/">Contact</a>
+        <a aria-label="our_work" href="../pages/our_work/">Our work</a>
+        <a aria-label="gigi_casting" href="../pages/GIGI_casting/">GIGI casting</a>
+        <a aria-label="about_us" href="../pages/about_us/">About us</a>
+        <a aria-label="contact" href="../pages/contact/">Contact</a>
       </div>
-      <div class="account-buttons flex row gap-20">
-        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path
-            d="M10.4946 9.49513V9.99487H1.49921V9.49513L2.4987 8.49564V5.49718C2.4987 3.94798 3.51318 2.58368 4.99742 2.1439V1.99898C4.99742 1.7339 5.10273 1.47967 5.29017 1.29223C5.47761 1.10479 5.73183 0.999489 5.99691 0.999489C6.262 0.999489 6.51622 1.10479 6.70366 1.29223C6.8911 1.47967 6.99641 1.7339 6.99641 1.99898V2.1439C8.48065 2.58368 9.49513 3.94798 9.49513 5.49718V8.49564L10.4946 9.49513ZM6.99641 10.4946C6.99641 10.7597 6.8911 11.0139 6.70366 11.2014C6.51622 11.3888 6.262 11.4941 5.99691 11.4941C5.73183 11.4941 5.47761 11.3888 5.29017 11.2014C5.10273 11.0139 4.99742 10.7597 4.99742 10.4946"
-            fill="#862B26" />
-        </svg>
+      <div id="account_buttons" class="account-buttons flex row gap-20">
         <a href="../pages/login/">
           <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
             <g clip-path="url(#clip0_3_869)">
@@ -73,27 +69,15 @@
         <img src="../images/Schermafbeelding 2025-02-11 om 21.47.34.png" />
         <img src="../images/080315350035_35.png" />
         <img src="../images/NINJAV_S001_S001_T074.00_14_26_15.Still005.png" />
-        <img src="../images/080315350037_37.png" />
-        <img src="../images/12.png" />
-        <img src="../images/Rupture_groep_luistert_copyright_BRUZZ_2023.png" />
-        <img src="../images/15.png" />
-        <img src="../images/22.png" />
-        <img src="../images/221108_MAIN_VAF_EDIT.02_00_15_24.Still021.png" />
-        <img src="../images/221108_MAIN_VAF_EDIT.03_42_36_18.Still046.png" />
-        <img src="../images/221108_MAIN_VAF_EDIT.03_54_04_12.Still047.png" />
       </div>
       <div class="flex row contains-logo">
-        <div class="flex row gap-20 hori-scroll scrollsnap width-10_14">
+        <div class="flex row-reverse gap-20 hori-scroll scrollsnap width-10_14">
           <img src="../images/221108_MAIN_VAF_EDIT.07_04_25_15.Still059.png" />
           <img src="../images/5. LAURA 1.png" />
           <img src="../images/8.png" />
           <img src="../images/080315350032_32.png" />
           <img src="../images/img009.png" />
           <img src="../images/NINJAV_S001_S001_T074.00_26_50_23.Still007.png" />
-          <img src="../images/Rupture_Eindbeeld_copyright_BRUZZ_2023.png" />
-          <img src="../images/080315350034_34.png" />
-          <img src="../images/Rupture_iedereen_GSM_copyright_BRUZZ_2023.png" />
-          <img src="../images/Rupture_ontbijt_copyright_BRUZZ_2023.png" />
         </div>
         <svg class="logo" width="82" height="50" viewBox="0 0 82 50" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path
@@ -111,25 +95,17 @@
         <img src="../images/SKIFF_CECILIA_VERHEYDEN_MIRAGE_FILMS_OUTPLAY_FILMS_VISUEL_1.png" />
         <img src="../images/Z & R.png" />
         <img src="../images/Rupture_AIcha_mist_copyright_BRUZZ_2023.png" />
-        <img src="../images/221108_MAIN_VAF_EDIT.02_00_15_24.Still021.png" />
-        <img src="../images/221108_MAIN_VAF_EDIT.07_04_25_15.Still059.png" />
-        <img src="../images/15.png" />
-        <img src="../images/NINJAV_S001_S001_T074.00_26_50_23.Still007.png" />
-        <img src="../images/22.png" />
-        <img src="../images/221108_MAIN_VAF_EDIT.03_54_04_12.Still047.png" />
       </div>
       <div class="flex center gap-20">
-        <button>Log In</button>
         <button>Register</button>
       </div>
     </div>
   </div>
-  <div class="our_work flex column gap-30">
+  <div class="our_work flex column gap-30 inverse-bg">
     <div class="wrapper flex column gap-30">
       <div class="text grid center gap-20">
-        <h1>Our work</h1>
-        <span>Learn more about passed projects, where GIGI films has collaborated with other artists, new actors and
-          casting directors.</span>
+        <h1 aria-label="our_work">Our work</h1>
+        <span aria-label="our_work_text_homepage">Learn more about passed projects, where GIGI films has collaborated with other artists, new actors and casting directors.</span>
       </div>
       <div class="text grid center gap-20">
         <div class="flex row justify-between">
@@ -209,11 +185,11 @@
       </div>
     </div>
   </div>
-  <div class="newsletter flex column gap-30">
+  <div class="newsletter flex column gap-30 inverse-bg">
     <div class="wrapper flex column gap-30">
       <div class="text grid center gap-20">
-        <h1>Newsletter</h1>
-        <span>Stay UpToDate with upcoming casting calls and further info on our projects.</span>
+        <h1 aria-label="newsletter">Newsletter</h1>
+        <span aria-label="newsletter_text">Stay UpToDate with upcoming casting calls and further info on our projects.</span>
       </div>
       <div class="flex center">
         <button>Sign up</button>
@@ -223,12 +199,12 @@
   <footer>
     <div class="flex row gap-30 justify-between">
       <div class="flex column gap-20 justify-between">
-        <a href="../pages/our_work/">Our work</a>
-        <a href="../pages/GIGI_casting/">GIGI casting</a>
-        <a href="../pages/about_us/">About us</a>
+        <a aria-label="our_work" href="../pages/our_work/">Our work</a>
+        <a aria-label="gigi_casting" href="../pages/GIGI_casting/">GIGI casting</a>
+        <a aria-label="about_us" href="../pages/about_us/">About us</a>
       </div>
       <div class="flex column gap-20 justify-between">
-        <a href="../pages/our_work/">Contact</a>
+        <a aria-label="contact" href="../pages/our_work/">Contact</a>
         <a href="mailto:#">zohra@gigifilms.be</a>
         <a href="mailto:#">romy@gigifilms.be</a>
         <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -253,6 +229,7 @@
       </svg>
     </div>
   </footer>
+  <script src="./functions.js"></script>
   <script src="../js/index.js"></script>
 </body>
 

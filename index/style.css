@@ -1,5 +1,9 @@
 .wrapper > div:not(.text, .hori-scroll, .contains-logo, .gigifilms) {
   width: 80%;
+
+  img {
+    overflow: hidden;
+  }
 }
 :where(.wrapper) .text {
   max-width: 800px;
@@ -24,6 +28,20 @@ html header > div::after {
   right: 17.5%;
   height: 1px;
   background-color: var(--secondary-bg-color);
+  transition: left .2s, right .2s;
+  transition-delay: .2s;
+}
+html header > div .text {
+  a::after {
+    bottom: -12px;
+  }
+}
+html header > div:has(a:hover) {
+  &::after {
+    left: 50%;
+    right: 50%;
+    transition-delay: 0s;
+  }
 }
 .gigifilms {
   grid-template-columns: repeat(12, 1fr);
@@ -69,18 +87,17 @@ html header > div::after {
 }
 .our_work,
 .newsletter {
-  background: var(--secondary-bg-color);
   margin: 0;
   width: 100%;
   max-width: unset;
-  padding: 40px 0;
 
   h1,
   span {
     color: var(--secondary-text-color);
   }
-  button {
+  button:hover {
     color: var(--primary-text-color);
+    background-color: var(--primary-bg-color);
   }
 }
 .text {
@@ -90,7 +107,7 @@ html header > div::after {
     }
   }
 }
-@media (max-width: 600px) {
+@media (max-width:600px) {
   html .contains-logo {
     margin-left: -150px;
     flex-direction: column;
@@ -114,16 +131,32 @@ html header > div::after {
     padding: 20px 0;
   }
   .grid.gigifilms {
-    grid-template-columns: 1fr;
-    grid-template-rows: unset;
+    width: 160vw;
+    margin-left: -30vw;
 
-    span,
-    img {
-      grid-column: unset;
-      grid-row: unset;
+    img:nth-child(1) {
+      grid-row: 3/4;
+      grid-column: 8/12;
+    }
+    img:nth-child(2) {
+      grid-row: 3/4;
+      grid-column: 4/8;
+    }
+    img:nth-child(3) {
+      grid-column: 2/6;
+    }
+    img:nth-child(4) {
+      grid-column: 6/10;
+    }
+    img:nth-child(5) {
+      grid-row: 1/2;
+      grid-column: 4/8;
+    }
+    img:nth-child(6) {
+      display: none;
     }
     span {
-      margin: 0 20px;
+      display: none;
     }
   }
   .wrapper > div.justify-end {

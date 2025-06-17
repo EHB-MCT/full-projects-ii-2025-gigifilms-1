@@ -1,0 +1,8 @@
+* {
+  scrollbar-color: var(--accent-color) var(--primary-bg-color);
+}
+@supports selector(::-webkit-scrollbar) {
+  * {
+    scrollbar-width: thin;
+  }
+}
