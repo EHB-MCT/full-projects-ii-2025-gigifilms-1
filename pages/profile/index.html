@@ -25,17 +25,12 @@
         </svg>
       </a>
       <div class="text flex row gap-20">
-        <a href="../our_work/">Our work</a>
-        <a href="../GIGI_casting/">GIGI casting</a>
-        <a href="../about_us/">About us</a>
-        <a href="../contact/">Contact</a>
+        <a aria-label="our_work" class="active" href="../our_work/">Our work</a>
+        <a aria-label="gigi_casting" href="../GIGI_casting/">GIGI casting</a>
+        <a aria-label="about_us" href="../about_us/">About us</a>
+        <a aria-label="contact" href="../contact/">Contact</a>
       </div>
       <div class="account-buttons flex row gap-20">
-        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path
-            d="M10.4946 9.49513V9.99487H1.49921V9.49513L2.4987 8.49564V5.49718C2.4987 3.94798 3.51318 2.58368 4.99742 2.1439V1.99898C4.99742 1.7339 5.10273 1.47967 5.29017 1.29223C5.47761 1.10479 5.73183 0.999489 5.99691 0.999489C6.262 0.999489 6.51622 1.10479 6.70366 1.29223C6.8911 1.47967 6.99641 1.7339 6.99641 1.99898V2.1439C8.48065 2.58368 9.49513 3.94798 9.49513 5.49718V8.49564L10.4946 9.49513ZM6.99641 10.4946C6.99641 10.7597 6.8911 11.0139 6.70366 11.2014C6.51622 11.3888 6.262 11.4941 5.99691 11.4941C5.73183 11.4941 5.47761 11.3888 5.29017 11.2014C5.10273 11.0139 4.99742 10.7597 4.99742 10.4946"
-            fill="#862B26" />
-        </svg>
         <a href="../login/">
           <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
             <g clip-path="url(#clip0_3_869)">
@@ -118,31 +113,31 @@
         <div class="flex column gap-20">
           <h1>Personal info</h1>
           <div class="flex column gap-10">
-            <label for="Date of birth">Date of birth</label>
+            <label aria-label="date_of_birth" for="Date of birth">Date of birth</label>
             <input type="date" id="date" />
           </div>
           <div class="flex column gap-10">
             <label for="gender">Gender</label>
             <select id="gender">
-              <option value="Choose">Choose</option>
-              <option value="male">Male</option>
-              <option value="female">Female</option>
+              <option aria-label="choose" value="Choose">Choose</option>
+              <option aria-label="male" value="male">Male</option>
+              <option aria-label="female" value="female">Female</option>
               <option value="x">X</option>
-              <option value="other">Other</option>
-              <option value="prefer">Prefer not to say</option>
+              <option aria-label="other" value="other">Other</option>
+              <option aria-label="prefer_not_to_say" value="prefer">Prefer not to say</option>
             </select>
           </div>
           <div class="flex column gap-10">
-            <label for="region">Region</label>
+            <label aria-label="region" for="region">Region</label>
             <input type="text" id="region" />
           </div>
           <div class="flex column gap-10">
-            <label for="length">Length</label>
+            <label aria-label="length" for="length">Length</label>
             <input type="length" id="length" />
           </div>
           <div class="group flex column gap-20">
             <div class="languages flex column gap-10">
-              <label>Languages</label>
+              <label aria-label="languages">Languages</label>
               <div class="tags flex gap-10 row">
                 <div class="tag flex row center">
                   <span>Dutch</span>
@@ -159,7 +154,7 @@
               </div>
             </div>
             <div class="Roots flex column gap-10">
-              <label>Roots</label>
+              <label aria-label="roots">Roots</label>
               <div class="tags flex gap-10 row">
                 <div class="tag flex row center">
                   <span>Moroccan</span>
@@ -176,7 +171,7 @@
               </div>
             </div>
             <div class="Hobbies flex column gap-10">
-              <label>Hobbies</label>
+              <label aria-label="hobbies">Hobbies</label>
               <div class="tags flex gap-10 row">
                 <div class="tag flex row center">
                   <span>Football</span>
@@ -200,8 +195,8 @@
             </div>
           </div>
           <div class="buttons flex row gap-20">
-            <button>Update</button>
-            <a class="center">Cancel</a>
+            <button aria-label="update">Update</button>
+            <a aria-label="cancel" class="center">Cancel</a>
           </div>
         </div>
       </div>
@@ -210,12 +205,12 @@
   <footer>
     <div class="flex row gap-30 justify-between">
       <div class="flex column gap-20 justify-between">
-        <a href="../pages/our_work/">Our work</a>
-        <a href="../pages/GIGI_casting/">GIGI casting</a>
-        <a href="../pages/about_us/">About us</a>
+        <a aria-label="our_work" href="../pages/our_work/">Our work</a>
+        <a aria-label="gigi_casting" href="../pages/GIGI_casting/">GIGI casting</a>
+        <a aria-label="about_us" href="../pages/about_us/">About us</a>
       </div>
       <div class="flex column gap-20 justify-between">
-        <a href="../pages/our_work/">Contact</a>
+        <a aria-label="contact" href="../pages/our_work/">Contact</a>
         <a href="mailto:#">zohra@gigifilms.be</a>
         <a href="mailto:#">romy@gigifilms.be</a>
         <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
