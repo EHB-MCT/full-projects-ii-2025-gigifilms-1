@@ -35,8 +35,11 @@ body {
 	line-height: 1;
   width: 100vw;
 }
-ol, ul {
+ol {
 	list-style: none;
+}
+ul {
+  padding-inline-start: 20px;
 }
 blockquote, q {
 	quotes: none;
