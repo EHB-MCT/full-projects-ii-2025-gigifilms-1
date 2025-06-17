@@ -4,7 +4,7 @@
   --header-bg: #000;
   --primary-text-color: #fff;
   --secondary-text-color: #000;
-  --accent-color: #8A0016;
+  --accent-color: #8a0016;
 }
 
 html,
@@ -41,7 +41,7 @@ button {
   position: relative;
   background-color: var(--accent-color);
   color: var(--primary-text-color);
-  transition: border-radius .5s;
+  transition: border-radius 0.5s;
   padding: 10px 20px;
 
   &::after {
@@ -59,7 +59,7 @@ button {
   text-align: center;
   font-size: 26px;
   box-sizing: border-box;
-  font-family: "acumin-pro-extra-condensed",sans-serif;
+  font-family: "acumin-pro-extra-condensed", sans-serif;
   font-weight: 600;
   font-style: normal;
 }
@@ -142,7 +142,7 @@ html header {
         height: 1px;
         background: var(--secondary-bg-color);
         transform: scaleX(0);
-        transition: transform .2s;
+        transition: transform 0.2s;
       }
     }
     a:where(:hover, .active) {
@@ -200,13 +200,14 @@ html footer {
     aspect-ratio: 1/1;
     right: 0;
     align-items: center;
-  
+
     .line {
       background-color: var(--primary-text-color);
       height: 4px;
       width: 100%;
       transform-origin: left;
-      transition: transform-origin .2s, transform 0.2s, opacity 0.2s, width .2s;
+      transition: transform-origin 0.2s, transform 0.2s, opacity 0.2s,
+        width 0.2s;
     }
   }
   .toggle:checked + .lbl_toggle .line.l1 {
@@ -228,7 +229,7 @@ html footer > div,
   max-width: 1200px;
   overflow: hidden;
 }
-@media (max-width:600px) {
+@media (max-width: 600px) {
   html header > div {
     height: 48px;
     margin: 0;
@@ -252,7 +253,7 @@ html footer > div,
       padding: 20px 30px;
       right: 0;
       transform: translateX(100%);
-      transition: transform .2s;
+      transition: transform 0.2s;
 
       &::after {
         content: "";
