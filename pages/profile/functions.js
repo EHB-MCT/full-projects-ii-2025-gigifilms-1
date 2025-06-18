@@ -1,13 +1,10 @@
-init();
-
-function init() {
-  let tab = "";
-  displayHTML();
-}
+let tab = "";
+let element = document.querySelector(".textDetailed > div");
 
 function changeHTMLAcc() {
-  tab = account;
-  innerHTML = `
+  document.querySelector("b.active").classList = "";
+  document.querySelector("b[aria-label='account']").classList = "active";
+  element.innerHTML = `
      
         <h1>Account</h1>
         <div class="flex column gap-10">
@@ -41,8 +38,9 @@ function changeHTMLAcc() {
 }
 
 function changeHTMLPer() {
-  tab = personal;
-  innerHTML = `<h1>Personal info</h1>
+  document.querySelector("b.active").classList = "";
+  document.querySelector("b[aria-label='personal_info']").classList = "active";
+  element.innerHTML = `<h1>Personal info</h1>
             <div class="flex column gap-10">
               <label aria-label="date_of_birth" for="Date of birth"
                 >Date of birth</label
@@ -200,8 +198,9 @@ function changeHTMLPer() {
 }
 
 function changeHTMLPar() {
-  tab = parental;
-  innerHTML = `<h1>Parental info (-18)</h1>
+  document.querySelector("b.active").classList = "";
+  document.querySelector("b[aria-label='parental_info']").classList = "active";
+  element.innerHTML = `<h1>Parental info (-18)</h1>
             <div class="flex column gap-10">
               <label aria-label="name parent" for="Name parent/guardian"
                 >Name parent/guardian</label
@@ -237,8 +236,9 @@ function changeHTMLPar() {
   document.querySelector(".container").innerHTML;
 }
 function changeHTMLVid() {
-  tab = video;
-  innerHTML = `<h1>Photo’s & video’s</h1>
+  document.querySelector("b.active").classList = "";
+  document.querySelector("b[aria-label='photos_videos']").classList = "active";
+  element.innerHTML = `<h1>Photo’s & video’s</h1>
             <div class="flex column gap-10">
            <label><h2>Short description</h2></label> <textarea id="biotext" rows="10" ></textarea>
             </div>
@@ -256,14 +256,4 @@ function changeHTMLVid() {
   document.querySelector(".container").innerHTML;
 }
 
-function displayHTML() {
-  if (tab == "account") {
-    changeHTMLAcc();
-  } else if (tab == "personal") {
-    changeHTMLPer();
-  } else if (tab == "parental") {
-    changeHTMLPar();
-  } else {
-    changeHTMLVid();
-  }
-}
+changeHTMLAcc();
