@@ -32,4 +32,6 @@ function renderCast(ar) {
   casting_list.innerHTML = html;
 }
 
-fetchCast();
+if (localStorage.getItem('userID') == 'admin' || localStorage.getItem('userID') == 'Regiseur') {
+  fetchCast();
+}
