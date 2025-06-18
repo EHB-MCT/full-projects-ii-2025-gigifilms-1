@@ -82,17 +82,17 @@
       </div>
     </header>
     <!-- gigi casting admin -->
-    <!-- <div class="flex column gap-30 wrapper">
-     <div class="grid text gap-20">
+    <div class="flex column gap-30 wrapper">
+      <div class="grid text gap-20">
         <div>
           <h1 aria-label="gigi_casting">GIGI Casting</h1>
         </div>
         <div>
           <span aria-label="gigi_casting_text">
             Gigi Casting focuses on streetcasting. Aiming for more diversity and
-            authenticity on screen. GIGI Casting guides new talent before set,
-            supports talent on set and counsels talent after set in taking the
-            next steps towards a artistic practice.
+            authenticity on screen. <br /><br />GIGI Casting guides new talent
+            before set, supports talent on set and counsels talent after set in
+            taking the next steps towards a artistic practice.
           </span>
         </div>
       </div>
@@ -101,8 +101,8 @@
           <h2 aria-label="project">Project</h2>
           <div id="project_list" class="flex column gap-10">
             <span class="active">Overzicht</span>
-            <span>Putain</span>
-            <span>Skiff</span>
+            <span>Lawaaimakers</span>
+            <span>Cabane</span>
           </div>
         </div>
         <div class="grid gap-20">
@@ -111,14 +111,14 @@
             <div class="arrow left center"><</div>
             <div class="flex column gap-20">
               <img src="../../images/Liam.png" alt="" />
-              <span>Putain</span>
+              <span>Lawaaimakers</span>
             </div>
             <div class="flex column gap-20">
               <img
                 src="../../images/SKIFF_CECILIA_VERHEYDEN_MIRAGE_FILMS_OUTPLAY_FILMS_VISUEL_1.png"
                 alt=""
               />
-              <span>Skiff</span>
+              <span>Cabane</span>
             </div>
             <div class="arrow right center">></div>
           </div>
@@ -142,16 +142,33 @@
           >
           <div id="criteria_list" class="flex column gap-10">
             <div class="flex column">
-              <label for="year_range" aria-label="year_of_birth"
-                >Year of Birth</label
-              >
-              <input
-                type="text"
-                name="year-range"
-                id="year_range"
-                placeholder="yyyy-yyyy"
-              />
+              <label for="year_range" aria-label="year_of_birth">Age</label>
+              <div class="values">
+                <span id="range1"> 0 </span>
+                <span> &dash; </span>
+                <span id="range2"> 100 </span>
+              </div>
+              <div class="container">
+                <div class="slider-track"></div>
+                <input
+                  type="range"
+                  min="0"
+                  max="100"
+                  value="30"
+                  id="slider-1"
+                  oninput="slideOne()"
+                />
+                <input
+                  type="range"
+                  min="0"
+                  max="100"
+                  value="70"
+                  id="slider-2"
+                  oninput="slideTwo()"
+                />
+              </div>
             </div>
+
             <div class="flex column">
               <label for="region" aria-label="region">Region</label>
               <input
@@ -164,10 +181,12 @@
             <div class="flex column">
               <label for="gender" aria-label="gender">Gender</label>
               <select name="gender" id="gender">
-                <option value="">---</option>
+                <option value="">Select</option>
                 <option value="male">Male</option>
                 <option value="female">Female</option>
                 <option value="x">X</option>
+                <option value="x">Other</option>
+                <option value="x">Prefer not to say</option>
               </select>
             </div>
             <div class="flex column">
@@ -182,56 +201,37 @@
             <div class="flex column">
               <label for="language" aria-label="language">Language</label>
               <select name="language" id="language">
-                <option value="">---</option>
-                <option value="dutch">Dutch</option>
-                <option value="english">English</option>
-                <option value="french">French</option>
+                <option value="">Select</option>
+                <option value="Dutch">Dutch</option>
+                <option value="English">English</option>
+                <option value="French">French</option>
               </select>
             </div>
             <div class="flex column">
               <label for="sport" aria-label="sport">Sport</label>
               <select name="sport" id="sport">
-                <option value="">---</option>
+                <option value="">Select</option>
                 <option value="ballet">Ballet</option>
                 <option value="judo">Judo</option>
-                <option value="duiken">Duiken</option>
+                <option value="duiken">Diving</option>
               </select>
             </div>
             <div class="flex column">
               <label for="hobbies" aria-label="hobbies">Hobbies</label>
               <select name="hobbies" id="hobbies">
-                <option value="">---</option>
+                <option value="">Select</option>
                 <option value="coding">Coding</option>
-                <option value="dans">Dans</option>
-                <option value="tekenen">Tekenen</option>
+                <option value="dans">Dance</option>
+                <option value="tekenen">Drawing</option>
               </select>
             </div>
             <div class="flex column">
               <label for="roots" aria-label="roots">Roots</label>
               <select name="roots" id="roots">
-                <option value="">---</option>
-                <option value="marokaans">Marokaans</option>
-                <option value="italiaans">Italiaans</option>
-                <option value="duits">Duits</option>
-              </select>
-            </div>
-            <div class="flex column">
-              <label for="instruments" aria-label="instruments"
-                >Instruments</label
-              >
-              <select name="instruments" id="instruments">
-                <option value="">---</option>
-                <option value="viool">Viool</option>
-                <option value="piano">Piano</option>
-                <option value="fluit">Fluit</option>
-                <option value="accordion">Accordion</option>
-              </select>
-            </div>
-            <div class="flex column">
-              <label for="skills" aria-label="skills">Skills</label>
-              <select name="skills" id="skills">
-                <option value="">---</option>
-                <option value="zingen">Zingen</option>
+                <option value="">Select</option>
+                <option value="marokaans">Maroccan</option>
+                <option value="italiaans">Italian</option>
+                <option value="duits">German</option>
               </select>
             </div>
           </div>
@@ -274,7 +274,7 @@
           </div>
         </div>
       </div>
-    </div> -->
+    </div>
 
     <!-- actor page -->
     <!-- <div class="flex column gap-30 wrapper">
@@ -334,7 +334,7 @@
       </div>
     </div> -->
     <!-- director page -->
-    <div class="flex column gap-30 wrapper">
+    <!-- <div class="flex column gap-30 wrapper">
       <div class="grid text gap-20">
         <div>
           <h1 aria-label="gigi_casting">GIGI Casting</h1>
@@ -422,7 +422,7 @@
            
         </div>
       </div>
-    </div>
+    </div> -->
 
     <footer>
       <div class="flex row gap-30 justify-between">
