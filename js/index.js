@@ -6,7 +6,7 @@
 let langDataArray;
 let authData;
 
-let pburl = 'http://192.168.123.76:8090';
+let pburl = 'http://10.2.89.246:8090';
 const pb = new PocketBase(pburl);
 
 async function init() {
