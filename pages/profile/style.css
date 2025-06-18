@@ -65,8 +65,9 @@ html .column-3-7 {
     align-self: flex-end;
     position: relative;
     overflow: visible;
+    text-decoration: none;
 
-    a {
+    span {
       color: var(--accent-color);
       font-weight: 600;
     }

@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="./style.css" />
   <link rel="stylesheet" href="../../css/structure.css" />
   <link rel="stylesheet" href="../../css/scrollers.css" />
+  <script src="../../js/pocketbase.umd.js"></script>
 </head>
 
 <body class="flex column gap-30">
@@ -97,27 +98,27 @@
       </div>
     </div>
     <div class="flex column gap-20 center">
-      <h1>Login</h1>
+      <h1 aria-label="login">Login</h1>
       <div class="flex column gap-20">
         <div class="flex column">
-          <label for="email">E-mail</label>
+          <label aria-label="email" for="email">E-mail</label>
           <input type="email" id="email" />
         </div>
         <div class="flex column">
           <div class="flex row gap-10">
-            <label for="password">Password</label>
-            <a href="#">Forgot password?</a>
+            <label aria-label="password" for="password">Password</label>
+            <a aria-label="forgot_password" href="#">Forgot password?</a>
           </div>
           <input type="password" id="password" />
         </div>
         <div class="flex row">
           <input type="checkbox" id="remember_me" />
-          <label for="remember_me">Remember Me</label>
+          <label aria-label="remember_me" for="remember_me">Remember Me</label>
         </div>
-        <button onclick="location.href='../profile/'">Login</button>
+        <button aria-label="login" onclick="location.href='../profile/'">Login</button>
         <div class="flex row gap-10">
-          <span>No account yet?</span>
-          <a href="../sign up/">Sign up now!</a>
+          <span aria-label="no_account_yet">No account yet?</span>
+          <a aria-label="sign_up_now" href="../sign up/">Sign up now!</a>
         </div>
       </div>
     </div>
