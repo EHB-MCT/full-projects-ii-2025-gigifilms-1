@@ -30,7 +30,7 @@ header * {
   span {
     text-align: center;
     text-transform: uppercase;
-    font-family: "field-gothic-condensed",sans-serif;
+    font-family: "field-gothic-condensed", sans-serif;
     font-size: 20px;
   }
   .arrow {
@@ -41,7 +41,7 @@ header * {
   grid-template-columns: 1fr 2fr;
   align-self: center;
   background: var(--primary-bg-color);
-  
+
   .flex {
     align-self: center;
   }
@@ -66,7 +66,7 @@ header * {
 .filter_parent .toggle {
   display: none;
 }
-@media (max-width:900px) {
+@media (max-width: 900px) {
   .grid.filter_parent {
     grid-template-columns: 1fr;
     overflow: hidden;
@@ -130,12 +130,30 @@ header * {
     }
   }
   .toggle:checked + label h2::after {
-      transform: rotate(270deg);
+    transform: rotate(270deg);
   }
-  #criteria_list  {
+  #criteria_list {
     display: none;
   }
   .filter_parent .toggle:checked ~ #criteria_list {
     display: flex;
+  }
+}
+
+/* gigi casting actor */
+.projects {
+  .partUno {
+    max-width: 10%;
+    background-color: white;
+    padding: 50px;
+  }
+  .partDos {
+    background-color: var(--primary-bg-color);
+    h3,
+    h4,
+    span {
+      color: var(--primary-text-color);
+    }
+    padding: 30px 20px;
   }
 }
