@@ -256,4 +256,14 @@ function changeHTMLVid() {
   document.querySelector(".container").innerHTML;
 }
 
+async function changeStroke() {
+  let pburl = 'http://192.168.123.76:8090';
+  const pb = new PocketBase(pburl);
+  const record = await pb.collection('users').getOne(localStorage.getItem('userID'));
+  console.log(record);
+  
+  document.querySelector('.stroke > div:first-child').innerHTML = `<img src="${pburl}/api/files/${record.collectionId}/${record.id}/${record.avatar}" class="center" /><h2 class="center">${record.name}</h2>`
+}
+
+changeStroke();
 changeHTMLAcc();

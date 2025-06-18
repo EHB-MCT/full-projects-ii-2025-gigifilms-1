@@ -41,6 +41,9 @@ html .column-3-7 {
   padding: 40px 0;
   background-color: #fff;
 }
+.stroke > div:first-child img {
+  max-width: 70%;
+}
 .inverse-bg {
   flex: 1 0 100%;
   padding: 0;
