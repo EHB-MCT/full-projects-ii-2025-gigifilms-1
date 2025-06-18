@@ -1,6 +1,7 @@
 window.onload = function () {
   slideOne();
   slideTwo();
+  filterRead();
 };
 
 let sliderOne = document.getElementById("slider-1");
@@ -10,6 +11,7 @@ let displayValTwo = document.getElementById("range2");
 let minGap = 0;
 let sliderTrack = document.querySelector(".slider-track");
 let sliderMaxValue = document.getElementById("slider-1").max;
+let filterValuesArray = "";
 
 function slideOne() {
   if (parseInt(sliderTwo.value) - parseInt(sliderOne.value) <= minGap) {
@@ -30,3 +32,7 @@ function fillColor() {
   percent2 = (sliderTwo.value / sliderMaxValue) * 100;
   sliderTrack.style.background = `linear-gradient(to right, #dadae5 ${percent1}% , #3264fe ${percent1}% , #3264fe ${percent2}%, #dadae5 ${percent2}%)`;
 }
+
+// function filterRead() {
+//   filterValuesArray = document.querySelectorall("[name]").value;
+// }
