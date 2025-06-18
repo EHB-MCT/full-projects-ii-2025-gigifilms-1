@@ -48,7 +48,7 @@ function changeLanguage(lang) {
 function updateLanguage(langData) {
   let translatable_elements = document.querySelectorAll("[aria-label]");
   for (const i of translatable_elements) {
-    document.querySelector(`[aria-label="${i.getAttribute('aria-label')}"]`).innerHTML = langData[i.getAttribute('aria-label')];
+    document.querySelector(`[aria-label="${i.getAttribute('aria-label')}"]`).element.innerHTML = langData[i.getAttribute('aria-label')];
   }
 }
 
