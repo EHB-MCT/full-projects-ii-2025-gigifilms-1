@@ -132,6 +132,26 @@ html header {
     font-size: 12px;
     align-items: center;
 
+    #languages {
+      position: relative;
+
+      .span_hidden {
+        position: absolute;
+        top: 0;
+        background-color: var(--secondary-bg-color);
+        border: 1px solid var(--primary-bg-color);
+        padding: 5px;
+        display: none;
+        
+        span {
+          color: var(--secondary-text-color);
+        }
+      }
+      .span_hidden:hover,
+      span:hover + .span_hidden {
+        display: flex;
+      }
+    }
     a {
       height: fit-content;
       text-decoration: none;

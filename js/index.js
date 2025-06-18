@@ -4,24 +4,46 @@
 // </svg>
 let pb = 'http://10.2.89.246:8090';
 
-async function updateLanguage() {
+let langDataArray;
+
+async function init() {
   let newLanguage;
   if (localStorage.getItem("language") == null) {
     localStorage.setItem("language", "en");
   }
   newLanguage = localStorage.getItem("language");
   const langFetch = await fetch(pb + "/api/collections/languages/records");
-  const langDataArray = await langFetch.json();
+  langDataArray = await langFetch.json();
   let langData;
+  let langSwitchHTML = "";
   for (const i of langDataArray.items) {
     if (i.id == newLanguage) {
       langData = i;
+      currenLanguage.innerHTML = i.id.toUpperCase();
+    }
+    langSwitchHTML += `<span onclick="changeLanguage('${i.id}')">${i.id.toUpperCase()}</span>`;
+  }
+  document.querySelector("#languages > .span_hidden").innerHTML = langSwitchHTML;
+  updateLanguage(langData);
+}
+
+function changeLanguage(lang) {
+  localStorage.setItem("language", lang);
+  let langData;
+  for (const i of langDataArray.items) {
+    if (i.id == lang) {
+      langData = i;
+      currenLanguage.innerHTML = i.id.toUpperCase();
     }
   }
+  updateLanguage(langData);
+}
+
+function updateLanguage(langData) {
   let translatable_elements = document.querySelectorAll("[aria-label]");
   for (const i of translatable_elements) {
     document.querySelector(`[aria-label="${i.getAttribute('aria-label')}"]`).innerHTML = langData[i.getAttribute('aria-label')];
   }
 }
 
-updateLanguage();
+init();
