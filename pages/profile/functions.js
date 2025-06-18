@@ -33,8 +33,6 @@ function changeHTMLAcc() {
         <a>Cancel</a>
       
     `;
-
-  document.querySelector(".container").innerHTML;
 }
 
 function changeHTMLPer() {
@@ -194,7 +192,6 @@ function changeHTMLPer() {
               <button aria-label="update">Update</button>
               <a aria-label="cancel" class="center">Cancel</a>
             </div>`;
-  document.querySelector(".container").innerHTML;
 }
 
 function changeHTMLPar() {
@@ -232,8 +229,6 @@ function changeHTMLPar() {
               <button aria-label="update">Update</button>
               <a aria-label="cancel" class="center">Cancel</a>
             </div>`;
-
-  document.querySelector(".container").innerHTML;
 }
 function changeHTMLVid() {
   document.querySelector("b.active").classList = "";
@@ -252,8 +247,6 @@ function changeHTMLVid() {
               <button aria-label="update">Update</button>
               <a aria-label="cancel" class="center">Cancel</a>
             </div>`;
-
-  document.querySelector(".container").innerHTML;
 }
 
 changeHTMLAcc();
