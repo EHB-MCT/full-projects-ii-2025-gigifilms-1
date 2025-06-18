@@ -1,4 +1,5 @@
-const pb = new PocketBase('http://10.2.89.246:8090');
+let pburl = 'http://10.2.89.246:8090';
+const pb = new PocketBase(pburl);
 
 // notification icon to be added when logged in
 // <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">

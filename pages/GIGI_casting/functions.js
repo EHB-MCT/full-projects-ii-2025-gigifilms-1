@@ -19,7 +19,7 @@ function renderCast(ar) {
                 </div>`
       } else {
         html += `<div class="cast_item">
-                  <img src="${i.avatar}" class="no-img" alt="">
+                  <img src="${pburl}/api/collections/users/records/${i.avatar}" class="no-img" alt="">
                   <div class="flex">
                     <span class="center">${i.name}</span>
                   </div>
