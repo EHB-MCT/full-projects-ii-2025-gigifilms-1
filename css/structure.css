@@ -47,6 +47,31 @@
 .gap-50 {
   gap: 50px;
 }
+.gap-60 {
+  gap: 60px;
+}
+.gap-80 {
+  gap: 80px;
+}
+.gap-100 {
+  gap: 100px;
+}
+.gap-150 {
+  gap: 150px;
+}
+.gap-160 {
+  gap: 160px;
+}
+.gap-200 {
+  gap: 200px;
+}
+.gap-250 {
+  gap: 250px;
+}
+.gap-380 {
+  gap: 380px;
+}
+
 .justify-end {
   justify-self: end;
   align-self: end;
@@ -107,12 +132,12 @@
 .width-10_14.scrollsnap {
   margin-left: calc(12.5vh / 2 * 3 * -1);
 }
-@media (max-width:900px) {
+@media (max-width: 900px) {
   .column-7-3 {
     grid-template-columns: 1fr 1fr;
   }
 }
-@media (max-width:600px) {
+@media (max-width: 600px) {
   .margin-50 {
     margin-left: -50px;
   }
