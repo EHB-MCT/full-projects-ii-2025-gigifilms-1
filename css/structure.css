@@ -64,6 +64,12 @@
   justify-content: center;
   align-content: center;
 }
+.white_space_no {
+  white-space: nowrap;
+}
+.max-800 {
+  max-width: 800px;
+}
 .hori-scroll {
   overflow: scroll hidden;
 

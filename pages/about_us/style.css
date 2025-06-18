@@ -4,15 +4,6 @@
 .educationRomy {
   display: flex;
 }
-
-.moreinfo {
-  & > * {
-    & > * {
-      display: flex;
-      gap: 20px;
-    }
-  }
-}
 .exhibitions {
   display: flex;
   div {

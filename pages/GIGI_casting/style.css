@@ -57,6 +57,35 @@ header * {
 }
 #casting_list {
   grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+
+  .cast_item {
+    position: relative;
+    overflow: hidden;
+
+    img {
+      border: 1px solid var(--primary-bg-color);
+      box-sizing: border-box;
+    }
+    div {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background-color: var(--primary-bg-color);
+      transform: translateX(-100%);
+      transition: transform .2s;
+
+      span {
+        padding: 5px;
+        color: var(--primary-text-color);
+      }
+    }
+    &:hover {
+      div {
+        transform: translateX(0);
+      }
+    }
+  }
 }
 #project_list span.active {
   padding-left: 50px;

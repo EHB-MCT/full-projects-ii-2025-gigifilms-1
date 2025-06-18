@@ -4,12 +4,14 @@
 <head>
   <meta charset="UTF-8">
   <title>Home | GIGIfilms</title>
+  <link rel="icon" type="image/x-icon" href="../images/logo_white.png">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link href="../css/style.css" rel="stylesheet" />
   <link rel="stylesheet" href="../css/reset.css">
   <link rel="stylesheet" href="./style.css">
   <link rel="stylesheet" href="../css/structure.css">
   <link rel="stylesheet" href="../css/scrollers.css">
+  <script src="../js/pocketbase.umd.js"></script>
 </head>
 
 <body class="flex column gap-30">
@@ -32,7 +34,8 @@
         <a aria-label="contact" href="../pages/contact/">Contact</a>
       </div>
       <div id="account_buttons" class="account-buttons flex row gap-20">
-        <a href="../pages/login/">
+        <a href="../pages/login/" class="flex row gap-10">
+          <span aria-label="sign_up" class="white_space_no center">Sign up</span>
           <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
             <g clip-path="url(#clip0_3_869)">
               <path fill-rule="evenodd" clip-rule="evenodd"
@@ -49,6 +52,14 @@
             </defs>
           </svg>
         </a>
+        <div id="languages">
+          <span id="currenLanguage">EN</span>
+          <div class="span_hidden column gap-10">
+            <span onclick="changeLanguage('en')">EN</span>
+            <span onclick="changeLanguage('nl')">NL</span>
+            <span onclick="changeLanguage('fr')">FR</span>
+          </div>
+        </div>
         <div class="wrap_hamburger">
           <input type="checkbox" id="hamburger_menu" class="toggle">
           <label for="hamburger_menu" class="lbl_toggle">
@@ -63,21 +74,21 @@
   <div class="flex column gap-20">
     <div class="wrapper flex column gap-20">
       <div class="flex row gap-20 hori-scroll scrollsnap">
-        <img src="../images/080315350031_31.png" />
-        <img src="../images/DSCF2049.png" />
-        <img src="../images/Rupture_AIcha_mist_copyright_BRUZZ_2023.png" />
-        <img src="../images/Schermafbeelding 2025-02-11 om 21.47.34.png" />
-        <img src="../images/080315350035_35.png" />
-        <img src="../images/NINJAV_S001_S001_T074.00_14_26_15.Still005.png" />
+        <img src="../images/3 b en w.png" />
+        <img src="../images/alcha full.png" />
+        <img src="../images/ana and yek liggen in park.png" />
+        <img src="../images/both looking eachother.png" />
+        <img src="../images/hoofddoek door.png" />
+        <img src="../images/b and w romy.png  " />
       </div>
       <div class="flex row contains-logo">
         <div class="flex row-reverse gap-20 hori-scroll scrollsnap width-10_14">
-          <img src="../images/221108_MAIN_VAF_EDIT.07_04_25_15.Still059.png" />
-          <img src="../images/5. LAURA 1.png" />
-          <img src="../images/8.png" />
-          <img src="../images/080315350032_32.png" />
-          <img src="../images/img009.png" />
-          <img src="../images/NINJAV_S001_S001_T074.00_26_50_23.Still007.png" />
+          <img src="../images/ana and yek outside laughing chill.png" />
+          <img src="../images/only romy.png" />
+          <img src="../images/light leak ana en yek.png" />
+          <img src="../images/ana en yek hand holding.png" />
+          <img src="../images/dark zohra and zus ana en yek.png" />
+          <img src="../images/cat.png" />
         </div>
         <svg class="logo" width="82" height="50" viewBox="0 0 82 50" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path
@@ -89,15 +100,15 @@
         </svg>
       </div>
       <div class="flex row gap-20 hori-scroll scrollsnap">
-        <img src="../images/Rupture_sneeuw_copyright_BRUZZ_2023.png" />
-        <img src="../images/Schermafbeelding 2025-02-11 om 21.47.18.png" />
-        <img src="../images/080315350036_36.png" />
-        <img src="../images/SKIFF_CECILIA_VERHEYDEN_MIRAGE_FILMS_OUTPLAY_FILMS_VISUEL_1.png" />
-        <img src="../images/Z & R.png" />
-        <img src="../images/Rupture_AIcha_mist_copyright_BRUZZ_2023.png" />
+        <img src="../images/b and white phone.png" />
+        <img src="../images/rupture mist groep.png" />
+        <img src="../images/rupture all together cafteria.png" />
+        <img src="../images/romy and zohra b en w.png" />
+        <img src="../images/ana en yek kitchen.png" />
+        <img src="../images/rupture calming.png" />
       </div>
       <div class="flex center gap-20">
-        <button>Register</button>
+        <button aria-label="register">Register</button>
       </div>
     </div>
   </div>
@@ -123,14 +134,8 @@
           fueled by their desire to connect. An intimate portrait of sisterly love and independence.</span>
       </div>
       <div class="flex justify-end gap-20">
-        <img src="../images/NINJAV_S001_S001_T074.00_26_50_23.Still007.png" />
-        <img src="../images/22.png" />
-        <img src="../images/221108_MAIN_VAF_EDIT.03_54_04_12.Still047.png" />
-      </div>
-      <div class="flex justify-start gap-20">
-        <img src="../images/221108_MAIN_VAF_EDIT.02_00_15_24.Still021.png" />
-        <img src="../images/221108_MAIN_VAF_EDIT.07_04_25_15.Still059.png" />
-        <img src="../images/15.png" />
+        <img src="../images/yellow dark shot.png" />
+        <img src="../images/zohra en zus straat.png" />
       </div>
       <div class="text grid center gap-20 rupture">
         <div class="flex row justify-between">
@@ -147,41 +152,30 @@
           young adults from Brussels as they embark on a transformative journey to the Spanish Pyrenees. Their adventure
           leads to profound reflections on life, identity, and the challenges of their migratory background.</span>
       </div>
-      <div class="flex justify-end gap-20">
-        <img src="../images/Rupture_iedereen_GSM_copyright_BRUZZ_2023.png" />
-        <img src="../images/Rupture_Eindbeeld_copyright_BRUZZ_2023.png" />
-        <img src="../images/Rupture_ontbijt_copyright_BRUZZ_2023.png" />
-      </div>
       <div class="flex justify-start gap-20">
-        <img src="../images/Rupture_sneeuw_copyright_BRUZZ_2023.png" />
-        <img src="../images/Rupture_groep_luistert_copyright_BRUZZ_2023.png" />
-        <img src="../images/Rupture_AIcha_mist_copyright_BRUZZ_2023.png" />
+        <img src="../images/rupture all together cafteria.png" />
+        <img src="../images/alcha full.png" />
       </div>
       <div class="flex center">
-        <button>Discover more</button>
+        <button aria-label="discorver_more">Discover more</button>
       </div>
     </div>
   </div>
   <div class="flex column gap-30">
     <div class="wrapper flex column gap-30">
       <div class="text grid center gap-20">
-        <h1>Behind GIGI films</h1>
+        <h1 aria-label="behind_gigi_films">Behind GIGI films</h1>
         <span>Zohra Benhammou & Romy Mana are a filmmakers duo based in Brussels. Their creative partnership began by
           chance and blossomed into their debut feature documentary, Ana + Yek (Me + You). </span>
       </div>
       <div class="grid gigifilms gap-20">
-        <img src="../images/080315350032_32.png" />
-        <img src="../images/Schermafbeelding 2025-02-11 om 21.47.18.png" />
-        <img src="../images/080315350031_31.png" />
-        <img src="../images/Schermafbeelding 2025-02-11 om 21.47.34.png" />
-        <img src="../images/080315350035_35.png" />
-        <img src="../images/080315350037_37.png" />
+        <img src="../images/Z & R.png" />
         <span>As writers and directors, they work beyond genres and formats, exploring (auto)biography, relational
           dynamics, spaces and places. They seek honest, direct images, always prioritizing relevance and sincerity in
           their playful, intuitive approach.</span>
       </div>
       <div class="flex center">
-        <button>Learn more</button>
+        <button aria-label="learn_more">Learn more</button>
       </div>
     </div>
   </div>
@@ -192,7 +186,7 @@
         <span aria-label="newsletter_text">Stay UpToDate with upcoming casting calls and further info on our projects.</span>
       </div>
       <div class="flex center">
-        <button>Sign up</button>
+        <button aria-label="sign_up">Sign up</button>
       </div>
     </div>
   </div>
@@ -229,8 +223,8 @@
       </svg>
     </div>
   </footer>
-  <script src="./functions.js"></script>
   <script src="../js/index.js"></script>
+  <script src="./functions.js"></script>
 </body>
 
 </html>
