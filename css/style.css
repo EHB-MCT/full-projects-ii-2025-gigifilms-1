@@ -68,7 +68,7 @@ select {
 }
 select,
 textarea,
-input:not([type="radio"], [type="checkbox"]) {
+input:not([type="radio"], [type="checkbox"], [type="range"]) {
   border: 1px solid var(--primary-bg-color);
   background-color: var(--secondary-bg-color);
   border-radius: 0;
@@ -79,7 +79,7 @@ input:not([type="radio"], [type="checkbox"]) {
   width: 100%;
   box-sizing: border-box;
 }
-input:not([type="radio"], [type="checkbox"]):where(:hover, :focus-within),
+input:not([type="radio"], [type="checkbox"], [type="range"]):where(:hover, :focus-within),
 button:where(:active, .active, :hover, .hover) {
   background-color: var(--secondary-bg-color);
   color: var(--secondary-text-color);
@@ -116,8 +116,12 @@ html header {
     width: calc(100% - 80px);
     max-width: 1200px;
     padding: 5px 10px;
-    height: 40px;
+    height: 50px;
     box-sizing: border-box;
+
+    .text a {
+      font-size: 1.2rem;
+    }
   }
   img {
     width: unset;
@@ -128,6 +132,26 @@ html header {
     font-size: 12px;
     align-items: center;
 
+    #languages {
+      position: relative;
+
+      .span_hidden {
+        position: absolute;
+        top: 0;
+        background-color: var(--secondary-bg-color);
+        border: 1px solid var(--primary-bg-color);
+        padding: 5px;
+        display: none;
+        
+        span {
+          color: var(--secondary-text-color);
+        }
+      }
+      .span_hidden:hover,
+      span:hover + .span_hidden {
+        display: flex;
+      }
+    }
     a {
       height: fit-content;
       text-decoration: none;

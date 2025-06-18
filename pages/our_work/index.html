@@ -5,11 +5,13 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Our Work | GIGIfilms</title>
+  <link rel="icon" type="image/x-icon" href="../../images/logo_white.png">
   <link href="../../css/reset.css" rel="stylesheet" />
   <link rel="stylesheet" href="../../css/style.css" />
   <link rel="stylesheet" href="./style.css" />
   <link rel="stylesheet" href="../../css/structure.css" />
   <link rel="stylesheet" href="../../css/scrollers.css" />
+  <script src="../../js/pocketbase.umd.js"></script>
 </head>
 
 <body class="flex column gap-50">
@@ -32,7 +34,8 @@
         <a aria-label="contact" href="../contact/">Contact</a>
       </div>
       <div id="account_buttons" class="account-buttons flex row gap-20">
-        <a href="../login/">
+        <a href="../login/" class="flex row gap-10">
+          <span aria-label="sign_up" class="white_space_no center">Sign up</span>
           <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
             <g clip-path="url(#clip0_3_869)">
               <path fill-rule="evenodd" clip-rule="evenodd"
@@ -49,6 +52,14 @@
             </defs>
           </svg>
         </a>
+        <div id="languages">
+          <span id="currenLanguage">EN</span>
+          <div class="span_hidden column gap-10">
+            <span onclick="changeLanguage('en')">EN</span>
+            <span onclick="changeLanguage('nl')">NL</span>
+            <span onclick="changeLanguage('fr')">FR</span>
+          </div>
+        </div>
         <div class="wrap_hamburger">
           <input type="checkbox" id="hamburger_menu" class="toggle" />
           <label for="hamburger_menu" class="lbl_toggle">
@@ -72,8 +83,8 @@
         *Rupture* to upcoming experiments in short-form storytelling, we push
         boundaries—always with sincerity and a playful touch.</b>
     </div>
-    <div class="grid anayek gap-20 wrapper">
-      <div class="flex gap-20 column">
+    <div class="grid gap-20">
+      <div class="flex gap-20 column max-800 center">
         <h2>Ana + Yek</h2>
         <!-- make white not red -->
         <span>Ana + Yek (Me + You) follows twin sisters Sanaa and Zohra. What
@@ -86,11 +97,11 @@
           sisterly love and independence.</span>
       </div>
       <div class="flex justify-start gap-20">
-        <img src="../../images/15.png" alt="" />
-        <img src="../../images/221108_MAIN_VAF_EDIT.07_04_25_15.Still059.png" alt="" />
-        <img src="../../images/221108_MAIN_VAF_EDIT.01_23_20_16.Still014.png" alt="" />
+        <img src="../../images/ana en yek kitchen.png" alt="" />
+        <img src="../../images/light leak ana en yek.png" alt="" />
+        <img src="../../images/hoofddoek door.png" alt="" />
       </div>
-      <div class="grid gap-20 text_grid center">
+      <div class="grid gap-20 text_grid center max-800">
         <div class="flex column">
           <b>A documentary film by</b>
           <span>Zohra Benhammou & Romy Mana</span>
@@ -113,28 +124,28 @@
         </div>
       </div>
     </div>
-    <div class="grid festival gap-20 wrapper">
-      <div class="flex gap-20 row">
-        <h3 class="center">Festivals selections</h3>
-        <ul>
-          <li>Film Fest Ghent, 2024</li>
-          <li>
-            Ji.hlava International Documentary Film Festival - "Best Original
-            Approach", 2024
-          </li>
-          <li>
-            Millenium International Documentary Film Festival Brussels, 2025
-          </li>
-        </ul>
-      </div>
-      <img src="../../images/221108_MAIN_VAF_EDIT.02_01_51_00.Still024.png" alt="" />
-      <img src="../../images/221108_MAIN_VAF_EDIT.02_00_15_24.Still021.png" alt="" />
-      <img src="../../images//221108_MAIN_VAF_EDIT.01_51_06_18.Still016.png" alt="" />
+    <div class="flex gap-20 row max-800 center">
+      <h3 aria-label="festival_selections" class="center">Festivals selections</h3>
+      <ul>
+        <li>Film Fest Ghent, 2024</li>
+        <li>
+          Ji.hlava International Documentary Film Festival - "Best Original
+          Approach", 2024
+        </li>
+        <li>
+          Millenium International Documentary Film Festival Brussels, 2025
+        </li>
+      </ul>
+    </div>
+    <div class="flex justify-end gap-20">
+      <img src="../../images/zohra kapper.png" alt="" />
+      <img src="../../images/slightly ajar door back towards camera.png" alt="" />
+      <img src="../../images/zohra en zus ana en yek kitchen zohra bored.png" alt="" />
     </div>
   </div>
   <div class="flex column gap-50 inverse-bg">
-    <div class="grid anayek gap-20 wrapper">
-      <div class="flex gap-20 column">
+    <div class="grid gap-20">
+      <div class="flex gap-20 column max-800 center">
         <h2>Rupture</h2>
         <span>They embark on a transformative journey to the Spanish Pyrenees.
           Their adventure leads to profound reflections on life, identity, and
@@ -147,11 +158,11 @@
         </span>
       </div>
       <div class="flex justify-start gap-20">
-        <img src="../../images/Rupture_iedereen_GSM_copyright_BRUZZ_2023.png" alt="" />
-        <img src="../../images/Rupture_Eindbeeld_copyright_BRUZZ_2023.png" alt="" />
-        <img src="../../images/Rupture_ontbijt_copyright_BRUZZ_2023.png" alt="" />
+        <img src="../../images/rupture phots maken groep.png" alt="" />
+        <img src="../../images/rupture all snow 1 person.png" alt="" />
+        <img src="../../images/rupture ontbijt.png" alt="" />
       </div>
-      <div class="grid gap-20 text_grid center">
+      <div class="grid gap-20 text_grid center max-800">
         <div class="flex column">
           <b>A documentary by</b>
           <span>Zohra Benhammou & Younes Haidar</span>
@@ -170,25 +181,23 @@
         </div>
       </div>
     </div>
-    <div class="grid festival gap-20 wrapper">
-      <div class="flex gap-20 row">
-        <h3 aria-label="festival_selections" class="center">
-          Festivals Selections
-        </h3>
-        <ul>
-          <li>Docville Leuven, 2024</li>
-          <li>
-            FIDADOC festival International de documentaire d'Agadir, 2024
-          </li>
-          <li>Festival International du Cinéma de Montagne d'Ouzoud, 2024</li>
-          <li>Filem'On Film Festival for Young Audiences, Bruxelles, 2024</li>
-          <li>Docfest Brugge, 2024</li>
-          <li>CINEMAMED Festival Cinéma Méditerranéen de Bruxelles, 2024</li>
-        </ul>
-      </div>
-      <img src="../../images/Rupture_groep_mist_copyright_BRUZZ_2023.png" alt="" />
-      <img src="../../images/Rupture_Ilyas_Imane_hut_copyright_BRUZZ_2023.png" alt="" />
-      <img src="../../images/Rupture_Khalid_copyright_BRUZZ_2023.png" alt="" />
+    <div class="flex gap-20 row center max-800">
+      <h3 aria-label="festival_selections" class="center">
+        Festivals Selections
+      </h3>
+      <ul>
+        <li>Docville Leuven, 2024</li>
+        <li>FIDADOC festival International de documentaire d'Agadir, 2024</li>
+        <li>Festival International du Cinéma de Montagne d'Ouzoud, 2024</li>
+        <li>Filem'On Film Festival for Young Audiences, Bruxelles, 2024</li>
+        <li>Docfest Brugge, 2024</li>
+        <li>CINEMAMED Festival Cinéma Méditerranéen de Bruxelles, 2024</li>
+      </ul>
+    </div>
+    <div class="flex justify-end gap-20">
+      <img src="../../images/rupture mist groep.png" alt="" />
+      <img src="../../images/rupture calming.png" alt="" />
+      <img src="../../images/khalid full.png" alt="" />
     </div>
   </div>
   <footer>
