@@ -198,7 +198,6 @@ header * {
   font-family: "Poppins", sans-serif;
 }
 .wrapper {
-  background-color: #fff;
   padding: 40px;
 }
 .container {
@@ -289,13 +288,13 @@ input[type="range"]::-ms-thumb {
 .Productions {
   background-color: var(--accent-color);
 }
-.pop-up {
+/* .pop-up {
   position: fixed;
   align-self: center;
-  width: calc(100%-20px);
+  width: calc(100%-40px);
   margin: auto;
   z-index: 2;
-}
+} */
 .projects {
   background-color: var(--accent-color);
 }
