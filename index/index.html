@@ -14,8 +14,8 @@
   <script src="../js/pocketbase.umd.js"></script>
 </head>
 
-<body class="flex column gap-30">
-  <header>
+<body class="flex column gap-30 child-padding-top-180">
+  <header class="no-padding">
     <div class="flex row justify-between">
       <a href="../index/">
         <svg class="logo" width="82" height="50" viewBox="0 0 82 50" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -71,7 +71,7 @@
       </div>
     </div>
   </header>
-  <div class="flex column gap-20">
+  <div class="flex column gap-20 no-padding">
     <div class="wrapper flex column gap-20">
       <div class="flex row gap-20 hori-scroll scrollsnap">
         <img src="../images/3 b en w.png" />
@@ -113,31 +113,34 @@
     </div>
   </div>
   <div class="our_work flex column gap-30 inverse-bg">
-    <div class="wrapper flex column gap-30">
-      <div class="text grid center gap-20">
+    <div class="wrapper flex column gap-30 child-padding-top-180">
+      <div class="text grid gap-120 no-padding">
         <h1 aria-label="our_work">Our work</h1>
         <span aria-label="our_work_text_homepage">Learn more about passed projects, where GIGI films has collaborated with other artists, new actors and casting directors.</span>
       </div>
       <div class="text grid center gap-20">
-        <div class="flex row justify-between">
-          <h2>Ana + Yek</h2>
-          <button popovertarget="anayek">More info</button>
+        <div class="flex row gap-80">
+          <div class="flex row justify-between">
+            <h2 class="center">Ana + Yek</h2>
+            <button popovertarget="anayek">More info</button>
+          </div>
+          <div popover="" id="anayek">Ana + Yek (Me + You) follows twin sisters Sanaa and Zohra. What begins as Zohra's
+            exploration of their Moroccan heritage gradually reveals the shifting dynamics of their relationship, as
+            Sanaa's deepening love for Islam becomes more apparent. The film unfolds as a journey of mutual understanding
+            — a cinematic dialogue fueled by their desire to connect. An intimate portrait of sisterly love and
+            independence.</div>
+          <span>Ana + Yek (Me + You) follows twin sisters Sanaa and Zohra. What begins as Zohra's exploration of their
+            Moroccan heritage gradually reveals the shifting dynamics of their relationship, as Sanaa's deepening love for
+            Islam becomes more apparent. The film unfolds as a journey of mutual understanding — a cinematic dialogue
+            fueled by their desire to connect. An intimate portrait of sisterly love and independence.</span>
         </div>
-        <div popover="" id="anayek">Ana + Yek (Me + You) follows twin sisters Sanaa and Zohra. What begins as Zohra's
-          exploration of their Moroccan heritage gradually reveals the shifting dynamics of their relationship, as
-          Sanaa's deepening love for Islam becomes more apparent. The film unfolds as a journey of mutual understanding
-          — a cinematic dialogue fueled by their desire to connect. An intimate portrait of sisterly love and
-          independence.</div>
-        <span>Ana + Yek (Me + You) follows twin sisters Sanaa and Zohra. What begins as Zohra's exploration of their
-          Moroccan heritage gradually reveals the shifting dynamics of their relationship, as Sanaa's deepening love for
-          Islam becomes more apparent. The film unfolds as a journey of mutual understanding — a cinematic dialogue
-          fueled by their desire to connect. An intimate portrait of sisterly love and independence.</span>
+        <img src="../images/zohra en zus buiten.png" alt="">
       </div>
       <div class="flex justify-end gap-20">
         <img src="../images/yellow dark shot.png" />
         <img src="../images/zohra en zus straat.png" />
       </div>
-      <div class="text grid center gap-20 rupture">
+      <div class="text grid center gap-80 rupture">
         <div class="flex row justify-between">
           <h2>Rupture</h2>
           <button popovertarget="anayek">More info</button>
@@ -152,16 +155,15 @@
           young adults from Brussels as they embark on a transformative journey to the Spanish Pyrenees. Their adventure
           leads to profound reflections on life, identity, and the challenges of their migratory background.</span>
       </div>
-      <div class="flex justify-start gap-20">
+      <div class="grid justify-start gap-20">
         <img src="../images/rupture all together cafteria.png" />
         <img src="../images/alcha full.png" />
-      </div>
-      <div class="flex center">
-        <button aria-label="discorver_more">Discover more</button>
+        <img src="../images/snow ruptire circel.png" />
+        <button aria-label="discover_more">Discover more</button>
       </div>
     </div>
   </div>
-  <div class="flex column gap-30">
+  <div class="flex column gap-30 padding-bottom-180">
     <div class="wrapper flex column gap-30">
       <div class="text grid center gap-20">
         <h1 aria-label="behind_gigi_films">Behind GIGI films</h1>
@@ -190,7 +192,7 @@
       </div>
     </div>
   </div>
-  <footer>
+  <footer class="no-padding">
     <div class="flex row gap-30 justify-between">
       <div class="flex column gap-20 justify-between">
         <a aria-label="our_work" href="../pages/our_work/">Our work</a>

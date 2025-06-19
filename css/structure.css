@@ -4,7 +4,6 @@
 .grid.text {
   grid-template-columns: auto 1fr;
   align-items: center;
-  padding: 0 0 0 40px;
   box-sizing: border-box;
 }
 .grid.single {
@@ -164,8 +163,6 @@
     grid-template-columns: 1fr;
     grid-template-rows: 1fr auto;
     padding: 0;
-    margin: 0 20px;
-    width: calc(100% - 40px);
   }
   .gap-20 {
     gap: 10px;

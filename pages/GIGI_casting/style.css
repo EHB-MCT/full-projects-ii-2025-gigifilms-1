@@ -23,9 +23,6 @@ header * {
 .grid.filter_parent {
   grid-template-columns: 300px 1fr;
 }
-.grid.text:not(#project) {
-  max-width: 650px;
-}
 .admin #projects {
   grid-template-columns: 1fr 2fr 2fr 1fr;
 
@@ -175,6 +172,26 @@ header * {
   }
   .filter_parent .toggle:checked ~ #criteria_list {
     display: flex;
+  }
+  .grid.text + .grid.filter_parent {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  #projects {
+    display: none;
+  }
+  .grid:has(> .switch) {
+    overflow: visible !important;
+  }
+  html h1 {
+    margin: 0;
+  }
+  html .gap-20,
+  html .gap-150 {
+    gap: 40px;
+  }
+  .filter_parent .gap-20 {
+    gap: 20px;
   }
 }
 

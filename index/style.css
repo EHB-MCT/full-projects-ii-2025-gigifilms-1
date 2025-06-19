@@ -6,7 +6,10 @@
   }
 }
 :where(.wrapper) .text {
-  max-width: 800px;
+  max-width: 1000px;
+  span {
+    max-width: 400px;
+  }
 }
 .wrapper > .grid.single {
   width: 50%;
@@ -16,9 +19,6 @@
   span {
     font-weight: 600;
   }
-}
-.rupture {
-  margin-top: 80px;
 }
 html header > div::after {
   content: "";
@@ -35,6 +35,10 @@ html header > div .text {
   a::after {
     bottom: -12px;
   }
+}
+.padding-bottom-180,
+html .newsletter {
+  padding-bottom: 180px;
 }
 html header > div:has(a:hover) {
   &::after {
@@ -148,8 +152,48 @@ html header > div:has(a:hover) {
       display: none;
     }
   }
+  .justify-between {
+    width: 100%;
+  }
+  html .wrapper .justify-end {
+    justify-content: center;
+  }
+  html .wrapper .justify-end img {
+    height: unset;
+  }
+  .grid.text {
+    width: 100%;
+  }
+  html .text.grid img {
+    width: 100%;
+  }
+  html .grid.justify-start {
+    display: flex;
+    flex-direction: column;
+
+    img {
+      width: 100%;
+      height: unset;
+    }
+    img:nth-last-child(2) {
+      display: none;
+    }
+    button {
+      display: none;
+    }
+  }
 }
 header + .flex > .wrapper {
   width: 100%;
   max-width: 100%;
+}
+h2 {
+  white-space: nowrap;
+}
+.text.grid img {
+  width: 300px;
+}
+.grid.justify-start {
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
 }

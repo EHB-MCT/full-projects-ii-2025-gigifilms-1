@@ -245,6 +245,9 @@ html footer {
     transform-origin: bottom left;
   }
 }
+.child-padding-top-180 > *:not(.justify-end, .no-padding, .justify-start) {
+  padding-top: 180px;
+}
 html footer > div,
 .wrapper {
   margin: auto;
@@ -296,6 +299,7 @@ html footer > div,
     width: calc(100% - 20px);
     margin: auto;
     overflow: hidden;
+    padding: 0 !important;
   }
   button {
     width: 110px;
