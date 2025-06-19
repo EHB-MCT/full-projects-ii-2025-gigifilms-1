@@ -82,6 +82,10 @@ html header > div:has(a:hover) {
     }
   }
 }
+[aria-label="discover_more"] {
+  width: 110px;
+  padding: 0;
+}
 @media (max-width:600px) {
   html .contains-logo {
     margin-left: -150px;
