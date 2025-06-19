@@ -30,3 +30,23 @@ html .films {
     grid-column: 2/3;
   }
 }
+@media (max-width:600px) {
+  html body > div .row {
+    flex-direction: column;
+  }
+  .exhibitions,
+  html .films {
+    display: flex;
+    flex-direction: column;
+  }
+  html .gap-100,
+  html .gap-200 {
+    gap: 20px;
+  }
+  .wrapper .wrapper {
+    width: 100%;
+  }
+  .romy {
+    padding: 10px 0;
+  }
+}

@@ -193,6 +193,9 @@ header * {
   .filter_parent .gap-20 {
     gap: 20px;
   }
+  html header .text {
+    gap: 10px;
+  }
 }
 
 /* gigi casting actor */
@@ -218,6 +221,7 @@ header * {
 .switch {
   h2 {
     position: relative;
+    width: fit-content;
   }
   h2.active::after {
     background-color: var(--accent-color);
@@ -339,6 +343,6 @@ input[type="range"]::-ms-thumb {
   margin: auto;
   z-index: 2;
 } */
-.projects {
+.pop-up .projects {
   background-color: var(--accent-color);
 }
