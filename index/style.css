@@ -1,9 +1,5 @@
 .wrapper > div:not(.text, .hori-scroll, .contains-logo, .gigifilms) {
   width: 55%;
-
-  img {
-    overflow: hidden;
-  }
 }
 :where(.wrapper) .text {
   max-width: 1000px;
