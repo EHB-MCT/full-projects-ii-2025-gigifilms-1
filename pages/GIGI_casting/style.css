@@ -333,7 +333,10 @@ input[type="range"]::-ms-thumb {
   position: fixed;
   display: none;
   inset: 40px;
-  padding: 10px;
+  bottom: unset;
+  height: fit-content;
+  max-height: calc(100vh - 80px);
+  padding: 100px 120px 120px 120px;
   border: 1px solid var(--primary-bg-color);
   z-index: 10;
   overflow: hidden scroll;
