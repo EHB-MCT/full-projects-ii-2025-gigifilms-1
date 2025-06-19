@@ -329,20 +329,60 @@ input[type="range"]::-ms-thumb {
   left: 0;
   right: 0;
 }
-/* pop up */
-.info {
-  background-color: white;
-}
-.Productions {
-  background-color: var(--accent-color);
-}
-/* .pop-up {
+.pop-up {
   position: fixed;
-  align-self: center;
-  width: calc(100%-40px);
-  margin: auto;
-  z-index: 2;
-} */
-.pop-up .projects {
-  background-color: var(--accent-color);
+  display: none;
+  inset: 40px;
+  padding: 10px;
+  border: 1px solid var(--primary-bg-color);
+  z-index: 10;
+  overflow: hidden scroll;
+
+  & > div {
+    position: relative;
+
+    & > div:first-child {
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+  }
+  .up {
+    img {
+      width: 190px;
+    }
+  }
+  .imag {
+    grid-template-columns: 1fr 1fr;
+    padding: 10px;
+    background-color: var(--accent-color);
+  }
+  .info,
+  .projects {
+    background-color: #fff;
+    padding: 10px;
+  }
+  .border {
+    border: 1px solid var(--primary-bg-color);
+  }
+  h5 {
+    padding: 5px 10px;
+  }
+  h5.active {
+    background-color: var(--accent-color);
+    color: var(--primary-text-color);
+  }
+  .tag {
+    border: 1px solid var(--primary-bg-color);
+    padding: 2px 5px;
+  }
+  .column-200-1 {
+    grid-template-columns: 200px 1fr;
+  }
+  .gap-20 {
+    gap: 20px;
+  }
+}
+.pop-up.open {
+  display: block;
 }
