@@ -87,6 +87,9 @@ header * {
     }
   }
 }
+.no-img {
+  background-color: var(--secondary-bg-color);
+}
 #project_list span.active {
   padding-left: 50px;
 }
