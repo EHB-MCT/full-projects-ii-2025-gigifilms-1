@@ -53,6 +53,13 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+b,
+span {
+  line-height: 22px;
+}
+ul li {
+  line-height: 28px;
+}
 h1,
 h2,
 h3 {
@@ -60,11 +67,14 @@ h3 {
 }
 h1 {
   font-size: 3rem;
+  line-height: 3rem;
 }
 h2 {
   font-size: 2.5rem;
+  line-height: 2.5rem;
   color: var(--accent-color);
 }
 h3 {
   font-size: 1.5rem;
+  line-height: 1.5rem;
 }
