@@ -1,5 +1,6 @@
+.max-800,
 .text.wrapper {
-  max-width: 800px;
+  max-width: 1000px;
 }
 .wrapper > div[class*="justify"] {
   width: 80%;
@@ -16,4 +17,20 @@ ul {
 .justify-start,
 .justify-end {
   width: 80%;
+}
+.rupture {
+  padding-top: 200px;
+}
+.child-padding-top-180 > *:not(.justify-end, .no-padding) {
+  padding-top: 180px;
+}
+.margin-100-auto {
+  margin: 0 auto 0 100px;
+
+  h3 {
+    white-space: nowrap;
+  }
+}
+[aria-label="festival_selections"] {
+  width: fit-content;
 }
