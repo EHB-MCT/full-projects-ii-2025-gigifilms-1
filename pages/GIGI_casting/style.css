@@ -74,7 +74,7 @@ header * {
       right: 0;
       background-color: var(--primary-bg-color);
       transform: translateX(-100%);
-      transition: transform .2s;
+      transition: transform 0.2s;
 
       span {
         padding: 5px;
@@ -324,4 +324,21 @@ input[type="range"]::-ms-thumb {
   bottom: -14px;
   left: 0;
   right: 0;
+}
+/* pop up */
+.info {
+  background-color: white;
+}
+.Productions {
+  background-color: var(--accent-color);
+}
+/* .pop-up {
+  position: fixed;
+  align-self: center;
+  width: calc(100%-40px);
+  margin: auto;
+  z-index: 2;
+} */
+.projects {
+  background-color: var(--accent-color);
 }

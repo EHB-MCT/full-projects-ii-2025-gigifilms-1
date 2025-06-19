@@ -78,10 +78,28 @@ input:not([type="radio"], [type="checkbox"], [type="range"]) {
   width: 100%;
   box-sizing: border-box;
 }
-input:not([type="radio"], [type="checkbox"], [type="range"]):where(:hover, :focus-within),
+input:not([type="radio"], [type="checkbox"], [type="range"]):where(
+    :hover,
+    :focus-within
+  ),
 button:where(:active, .active, :hover, .hover) {
   background-color: var(--secondary-bg-color);
   color: var(--secondary-text-color);
+}
+.tags {
+  display: flex;
+
+  .tag {
+    border: 1px solid black;
+    background: var(--secondary-bg-color);
+    max-width: fit-content;
+    padding: 5px;
+    gap: 5px;
+
+    svg path {
+      fill: var(--primary-bg-color);
+    }
+  }
 }
 .inverse-bg {
   background-color: var(--secondary-bg-color);
@@ -142,7 +160,7 @@ html header {
         border: 1px solid var(--primary-bg-color);
         padding: 5px;
         display: none;
-        
+
         span {
           color: var(--secondary-text-color);
         }
