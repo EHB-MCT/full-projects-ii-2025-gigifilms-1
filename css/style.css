@@ -96,6 +96,7 @@ button:where(:active, .active, :hover, .hover) {
   button {
     color: var(--primary-text-color);
   }
+  button.active,
   button:hover {
     color: var(--primary-text-color);
     background-color: var(--primary-bg-color);
