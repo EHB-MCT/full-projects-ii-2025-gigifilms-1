@@ -57,6 +57,9 @@ if (localStorage.getItem('userType') == 'admin' || localStorage.getItem('userTyp
 
 function castingCallBut(id) {
   let text = "Signed up";
+  if (document.getElementById(id).classList.contains("active")) {
+    text = "Sign Up";
+  }
   document.getElementById(id).innerHTML = text;
   document.getElementById(id).classList.toggle("active");
 }
