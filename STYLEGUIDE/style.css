@@ -1,0 +1,37 @@
+:root {
+  --bg-color: #000;
+  --accent-color: #862B26;
+  --secondary-color: #EADBBB;
+  --tertiary-color: #fff;
+}
+
+* {
+  color: var(--secondary-color);
+}
+
+img {
+  opacity: .9;
+}
+
+body {
+  background: var(--bg-color);
+}
+select,
+textarea,
+input:not([type="radio"], [type="checkbox"]),
+button {
+  all: unset;
+  background-color: var(--accent-color);
+  transition: border-radius .5s;
+  padding: 5px 10px;
+}
+select {
+  appearance: auto;
+}
+select:where(:hover, :open),
+textarea:where(:hover, :focus-within),
+input:not([type="radio"], [type="checkbox"]):where(:hover, :focus-within),
+button:where(:active, :hover, .active, .hover) {
+  border-radius: 8px;
+  color: var(--tertiary-color);
+}

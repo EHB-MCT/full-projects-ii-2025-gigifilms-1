@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url("https://use.typekit.net/dru8gsk.css");
+
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -19,8 +22,8 @@ time, mark, audio, video {
 	margin: 0;
 	padding: 0;
 	border: 0;
-	font-size: 100%;
-	font: inherit;
+	font-size: 1rem;
+  font-family: "Inter", sans-serif;
 	vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
@@ -30,9 +33,13 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
 	line-height: 1;
+  width: 100vw;
 }
-ol, ul {
+ol {
 	list-style: none;
+}
+ul {
+  padding-inline-start: 20px;
 }
 blockquote, q {
 	quotes: none;
@@ -45,4 +52,29 @@ q:before, q:after {
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
+}
+b,
+span {
+  line-height: 22px;
+}
+ul li {
+  line-height: 28px;
+}
+h1,
+h2,
+h3 {
+  font-family: "field-gothic-condensed",sans-serif;
+}
+h1 {
+  font-size: 3rem;
+  line-height: 3rem;
+}
+h2 {
+  font-size: 2.5rem;
+  color: var(--primary-text-color);
+  line-height: 2.5rem;
+}
+h3 {
+  font-size: 1.5rem;
+  line-height: 1.5rem;
 }
