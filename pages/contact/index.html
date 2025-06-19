@@ -5,14 +5,16 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact | GIGIfilms</title>
+  <link rel="icon" type="image/x-icon" href="../../images/logo_white.png">
   <link href="../../css/reset.css" rel="stylesheet" />
   <link rel="stylesheet" href="../../css/style.css">
   <link rel="stylesheet" href="./style.css">
   <link rel="stylesheet" href="../../css/structure.css">
   <link rel="stylesheet" href="../../css/scrollers.css">
+  <script src="../../js/pocketbase.umd.js"></script>
 </head>
 
-<body>
+<body class="flex column gap-30">
   <header>
     <div class="flex row justify-between">
       <a href="../../index/">
@@ -32,7 +34,8 @@
         <a aria-label="contact" href="../contact/" class="active">Contact</a>
       </div>
       <div id="account_buttons" class="account-buttons flex row gap-20">
-        <a href="../login/">
+        <a href="../login/" class="flex row gap-10">
+          <span aria-label="sign_up" class="white_space_no center">Sign up</span>
           <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
             <g clip-path="url(#clip0_3_869)">
               <path fill-rule="evenodd" clip-rule="evenodd"
@@ -49,6 +52,14 @@
             </defs>
           </svg>
         </a>
+        <div id="languages">
+          <span id="currenLanguage">EN</span>
+          <div class="span_hidden column gap-10">
+            <span onclick="changeLanguage('en')">EN</span>
+            <span onclick="changeLanguage('nl')">NL</span>
+            <span onclick="changeLanguage('fr')">FR</span>
+          </div>
+        </div>
         <div class="wrap_hamburger">
           <input type="checkbox" id="hamburger_menu" class="toggle">
           <label for="hamburger_menu" class="lbl_toggle">

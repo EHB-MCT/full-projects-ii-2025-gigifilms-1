@@ -13,7 +13,6 @@ body {
   min-height: 100vh;
   box-sizing: border-box;
 }
-
 * {
   color: var(--primary-text-color);
   fill: var(--primary-text-color);
@@ -28,6 +27,7 @@ body {
 img {
   opacity: 0.9;
   width: 100%;
+  overflow: hidden;
 }
 body {
   background: var(--primary-bg-color);
@@ -54,7 +54,8 @@ button {
   }
 }
 button {
-  width: 152px;
+  min-width: 152px;
+  width: fit-content;
   aspect-ratio: 190/70;
   text-align: center;
   font-size: 26px;
@@ -68,7 +69,7 @@ select {
 }
 select,
 textarea,
-input:not([type="radio"], [type="checkbox"]) {
+input:not([type="radio"], [type="checkbox"], [type="range"]) {
   border: 1px solid var(--primary-bg-color);
   background-color: var(--secondary-bg-color);
   border-radius: 0;
@@ -79,10 +80,28 @@ input:not([type="radio"], [type="checkbox"]) {
   width: 100%;
   box-sizing: border-box;
 }
-input:not([type="radio"], [type="checkbox"]):where(:hover, :focus-within),
+input:not([type="radio"], [type="checkbox"], [type="range"]):where(
+    :hover,
+    :focus-within
+  ),
 button:where(:active, .active, :hover, .hover) {
   background-color: var(--secondary-bg-color);
   color: var(--secondary-text-color);
+}
+.tags {
+  display: flex;
+
+  .tag {
+    border: 1px solid black;
+    background: var(--secondary-bg-color);
+    max-width: fit-content;
+    padding: 5px;
+    gap: 5px;
+
+    svg path {
+      fill: var(--primary-bg-color);
+    }
+  }
 }
 .inverse-bg {
   background-color: var(--secondary-bg-color);
@@ -97,6 +116,7 @@ button:where(:active, .active, :hover, .hover) {
   button {
     color: var(--primary-text-color);
   }
+  button.active,
   button:hover {
     color: var(--primary-text-color);
     background-color: var(--primary-bg-color);
@@ -116,8 +136,12 @@ html header {
     width: calc(100% - 80px);
     max-width: 1200px;
     padding: 5px 10px;
-    height: 40px;
+    height: 50px;
     box-sizing: border-box;
+
+    .text a {
+      font-size: 1.2rem;
+    }
   }
   img {
     width: unset;
@@ -128,6 +152,26 @@ html header {
     font-size: 12px;
     align-items: center;
 
+    #languages {
+      position: relative;
+
+      .span_hidden {
+        position: absolute;
+        top: 0;
+        background-color: var(--secondary-bg-color);
+        border: 1px solid var(--primary-bg-color);
+        padding: 5px;
+        display: none;
+
+        span {
+          color: var(--secondary-text-color);
+        }
+      }
+      .span_hidden:hover,
+      span:hover + .span_hidden {
+        display: flex;
+      }
+    }
     a {
       height: fit-content;
       text-decoration: none;
@@ -196,7 +240,7 @@ html footer {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    width: 100%;
+    width: 24px;
     aspect-ratio: 1/1;
     right: 0;
     align-items: center;
@@ -221,6 +265,9 @@ html footer {
     transform: rotate(-45deg) translateX(3px);
     transform-origin: bottom left;
   }
+}
+.child-padding-top-180 > *:not(.justify-end, .no-padding, .justify-start) {
+  padding-top: 180px;
 }
 html footer > div,
 .wrapper {
@@ -273,9 +320,16 @@ html footer > div,
     width: calc(100% - 20px);
     margin: auto;
     overflow: hidden;
+    padding: 0 !important;
   }
   button {
-    width: 110px;
+    min-width: 110px;
     font-size: 16px;
+  }
+  .child-padding-top-180 > :not(.justify-end, .no-padding, .justify-start) {
+    padding-top: 10px;
+  }
+  html .gap-120 {
+    gap: 20px;
   }
 }

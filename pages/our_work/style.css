@@ -1,5 +1,6 @@
+.max-800,
 .text.wrapper {
-  max-width: 800px;
+  max-width: 1000px;
 }
 .wrapper > div[class*="justify"] {
   width: 80%;
@@ -9,6 +10,11 @@
 }
 .text_grid {
   grid-template-columns: 3fr 2fr 3fr;
+
+  span,
+  b {
+    font-size: .8rem;
+  }
 }
 ul {
   list-style: inside;
@@ -16,4 +22,63 @@ ul {
 .justify-start,
 .justify-end {
   width: 80%;
+}
+.rupture {
+  padding-top: 200px;
+  padding-bottom: 200px;
+}
+.margin-100-auto {
+  margin: 0 auto 0 100px;
+
+  h3 {
+    white-space: nowrap;
+  }
+}
+[aria-label="festival_selections"] {
+  width: fit-content;
+}
+@media (max-width:600px) {
+  html .text_grid {
+    grid-template-columns: 1fr;
+    gap: 0;
+    justify-self: start;
+  }
+  html .justify-end {
+    width: 100%;
+    img:first-child {
+      display: none;
+    }
+  }
+  html .justify-start {
+    display: contents;
+    
+    img:first-child {
+      grid-row: 1/2;
+      grid-column: 1/-1;
+    }
+  }
+  .anayek {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    & > * {
+      grid-column: 1/-1;
+    }
+  }
+  html body > div .row {
+    flex-direction: column;
+  }
+  .margin-100-auto {
+    margin: 0;
+
+    h3 {
+      align-self: flex-start;
+    }
+  }
+  html .gap-120 {
+    gap: 20px;
+  }
+  html body > div.child-padding-top-180 {
+    padding: 0 30px;
+  }
 }

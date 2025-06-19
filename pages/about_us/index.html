@@ -5,14 +5,16 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>About Us | GIGIfilms</title>
+  <link rel="icon" type="image/x-icon" href="../../images/logo_white.png">
   <link href="../../css/reset.css" rel="stylesheet" />
   <link rel="stylesheet" href="../../css/style.css" />
   <link rel="stylesheet" href="./style.css" />
   <link rel="stylesheet" href="../../css/structure.css" />
-  <link rel="stylesheet" href="../../css/scrollers.css" />
+  <link rel="stylesheet" href="../../css/scrollers.css">
+  <script src="../../js/pocketbase.umd.js"></script>
 </head>
 
-<body>
+<body class="flex column gap-100">
   <header>
     <div class="flex row justify-between">
       <a href="../../index/">
@@ -26,13 +28,14 @@
         </svg>
       </a>
       <div class="text flex row gap-20">
-        <a aria-label="our_work" href="../our_work/">Our work</a>
-        <a aria-label="gigi_casting" href="../GIGI_casting/">GIGI casting</a>
-        <a aria-label="about_us" href="../about_us/" class="active">About us</a>
-        <a aria-label="contact" href="../contact/">Contact</a>
+        <a href="../our_work/">Our work</a>
+        <a href="../GIGI_casting/">GIGI casting</a>
+        <a href="../about_us/" class="active">About us</a>
+        <a href="../contact/">Contact</a>
       </div>
       <div id="account_buttons" class="account-buttons flex row gap-20">
-        <a href="../login/">
+        <a href="../login/" class="flex row gap-10">
+          <span aria-label="sign_up" class="white_space_no center">Sign up</span>
           <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
             <g clip-path="url(#clip0_3_869)">
               <path fill-rule="evenodd" clip-rule="evenodd"
@@ -49,6 +52,14 @@
             </defs>
           </svg>
         </a>
+        <div id="languages">
+          <span id="currenLanguage">EN</span>
+          <div class="span_hidden column gap-10">
+            <span onclick="changeLanguage('en')">EN</span>
+            <span onclick="changeLanguage('nl')">NL</span>
+            <span onclick="changeLanguage('fr')">FR</span>
+          </div>
+        </div>
         <div class="wrap_hamburger">
           <input type="checkbox" id="hamburger_menu" class="toggle" />
           <label for="hamburger_menu" class="lbl_toggle">
@@ -60,63 +71,184 @@
       </div>
     </div>
   </header>
-  <div class="grid column-7-3 gap-30 wrapper">
-    <div class="grid text gap-20">
+  <div class="zohra grid gap-200 wrapper">
+    <div class="grid text gap-40 max-800 center">
       <h1>About us</h1>
       <span>Zohra Benhammou & Romy Mana are a filmmakers duo based in Brussels.
         Their creative partnership began by chance and blossomed into their
-        debut feature documentary, Ana + Yek (Me + You). As writers and
-        directors, they work beyond genres and formats, exploring
-        (auto)biography, relational dynamics, spaces and places. They seek
-        honest, direct images, always prioritizing relevance and sincerity in
-        their playful, intuitive approach.</span>
+        debut feature documentary, Ana + Yek (Me + You).<br /><br />
+        As writers and directors, they work beyond genres and formats,
+        exploring (auto)biography, relational dynamics, spaces and places.
+        They seek honest, direct images, always prioritizing relevance and
+        sincerity in their playful, intuitive approach.</span>
     </div>
-    <div class="zohra_bio">
-      <h2>Zohra Benhammou</h2>
-      <span>Zohra Benhammou (1994, Brussels) is a Belgian-Moroccan filmmaker.
-        Drawing on her background, she delves into the subtleties of personal
-        narratives and heritage. Through her work she aims to convey the
-        nuances of culture, religion and identity, weaving connections that
-        bridge different realms and fostering understanding.</span>
-    </div>
-    <div class="pictures">
-      <div class="one-picture">
-        <img src="../../images/zohra only.png" />
+    <div class="flex row gap-20 wrapper">
+      <div class="center gap-40">
+        <h2>Zohra Benhammou</h2>
+        <span>Zohra Benhammou (1994, Brussels) is a Belgian-Moroccan filmmaker.
+          Drawing on her background, she delves into the subtleties of personal
+          narratives and heritage. Through her work she aims to convey the
+          nuances of culture, religion and identity, weaving connections that
+          bridge different realms and fostering understanding.</span>
       </div>
-      <div class="flex justify-end gap-20">
-        <img src="../../images/b and white phone.png" />
-        <img src="../../images/zohra ana en yek laugh.png" />
-        <img src="../../images/both looking eachother.png" />
+      <img src="../../images/zohra only.png" />
+    </div>
+    <div class="moreinfo flex column gap-200">
+      <div class="films flex column gap-30">
+        <h3>Films</h3>
+        <div class="film finished flex column">
+          <h4>Finished Work</h4>
+          <ul class="flex column gap-10">
+            <li>Rupture, 2024, BRUZZ</li>
+            <li>Ana + Yek, 2024, Mirage Films</li>
+          </ul>
+        </div>
+        <div class="film wip flex column">
+          <h4>Work in progress</h4>
+          <ul class="flex column gap-10">
+            <li>Lawaaimakers, short documentary film, 2024-currently</li>
+            <li>Cabane, shortfilm, 2022-currently</li>
+          </ul>
+        </div>
+        <div class="film festival flex column">
+          <h4>Festival selections</h4>
+          <ul class="flex column gap-10">
+            <li>Rupture, Docville Leuven, 2024</li>
+            <li>Rupture, FIDADOC festival International de documentaire d'Agadir, 2024</li>
+            <li>Rupture, Festival International du Cinéma de Montagne d'Ouzoud, 2024</li>
+            <li>Rupture, Filem'On Film Festival for Young Audiences, Bruxelles, 2024</li>
+            <li>Rupture, Docfest Brugge, 2024</li>
+            <li>Rupture, CINEMAMED Festival Cinéma Méditerranéen de Bruxelles, 2024</li>
+            <li>Ana + Yek, Film Fest Gent, 2024</li>
+            <li>Ana + Yek, Ji.hlava International Documentary Film Festival, Tsjechië, 2024</li>
+            <li>Ana + Yek, Millenium Festival, Brussel, 2025</li>
+          </ul>
+        </div>
+        <div class="film residence flex column">
+          <h4>Residency</h4>
+          <ul class="flex column gap-10">
+            <li>Halaqat Audiovisual Residency in collaboration with Goethe-Institut and Bozar together with Atelier
+              Graphoui, Cinemaximiliaan and Sound Image Culture - SIC, Brussels, 2022</li>
+            <li>Residency for Audiovisual projects in collaboration with deAuteurs and De Letterie, Ostend, 2025</li>
+          </ul>
+        </div>
+      </div>
+      <div class="film flex column gap-30">
+        <h3>Casting director</h3>
+        <div class="cast flex column">
+          <h4>Fiction</h4>
+          <ul class="flex column gap-10">
+            <li>Skiff, feature film by Cecilia Verheyden, 2022, Mirage Films</li>
+            <li>Putain, fiction serie by Gorik van Oudheusden, Frederik Willem Daem, Deben Van Dam, 2022-2023, Panenka
+            </li>
+            <li>JULIAN, feature film by Cato Kusters, 2024, The Reunion (casting assistante)</li>
+          </ul>
+        </div>
+        <div class="cast flex column">
+          <h4>Advertisement</h4>
+          <ul class="flex column gap-10">
+            <li>VDAB, campagne by Joe Vanhoutteghem, 2025, CZAR</li>
+          </ul>
+        </div>
+      </div>
+      <div class="tutor flex column">
+        <h3>Tutor</h3>
+        <ul class="flex column gap-10">
+          <li>External jury 3ba Film, Luca School Of Arts, 2023</li>
+          <li>Tutor MA Film, Luca School Of Arts, 2024-2025</li>
+          <li>Tutor peer to peer MA Film, Luca School Of Arts, 2024-2025</li>
+          <li>Masterclass MA Film, Echoes of Ji.hlava, RICTS, 2025</li>
+          <li>External jury ma Documentary, RITCS, 2025</li>
+        </ul>
       </div>
     </div>
   </div>
-  <div class="white flex column gap-30">
-    <div class="wrapper flex column gap-30">
-      <div class="romyBio">
+  <div class="romy flex column inverse-bg">
+    <div class="wrapper flex column gap-200">
+      <div class="flex row gap-20 wrapper">
         <div class="textRomy">
           <h2>Romy Mana</h2>
-          <span>Romy Mana (Born Romy Vanderveken, 1994, Brussels) primarily works
-            with performance, sculpture, writing, video and film. In many
-            cases her work combines aspects of different media, blurring
-            boundaries between conventionally distinct categories. She works
-            with a content that can vary from being very personal, a memory,
-            notions of her heritage to the more universal, notions of
-            displacement and loss, finding ways of representing through
-            shifts, ruptures of the visual and linguistic forms of her
-            works.</span>
+          <div>
+            <span>Romy Mana (Born Romy Vanderveken, 1994, Brussels) primarily
+              works with performance, sculpture, writing, video and film. In
+              many cases her work combines aspects of different media,
+              blurring boundaries between conventionally distinct categories.
+              <br />
+              <br />
+              She works with a content that can vary from being very personal,
+              a memory, notions of her heritage to the more universal, notions
+              of displacement and loss, finding ways of representing through
+              shifts, ruptures of the visual and linguistic forms of her
+              works.</span>
+            <br />
+            <br />
+            <span>Education LUCA, Bachelor Fine Arts, Brussels, Belgium,
+              2012-2015 KASK, Master Installation, Ghent, Belgium, 2016-2018
+              KKH, Bachelor, Stockholm, Erasmus, 2015</span>
+          </div>
         </div>
-        <div>
-          <img src="../../images/only romy.png" />
-        </div>
+        <img src="../../images/only romy.png" />
       </div>
-      <div class="educationRomy">
-        <div class="imgRomy flex justify-end gap-20">
-          <img src="../../images/3 b en w.png" />
-          <img src="../../images/zohra zus hoofddoek ana en yek.png" />
+      <div class="moreinfo flex column gap-200">
+        <div class="films">
+          <h3>Films</h3>
+          <div class="film flex column">
+            <h4>Finished Work</h4>
+            <ul>
+              <li>Ana + Yek, 2024, Mirage Films</li>
+            </ul>
+          </div>
+          <div class="film flex column">
+            <h4>Work in progress</h4>
+            <ul>
+              <li>Lawaaimakers, short documentary film, 2024-currently</li>
+              <li>Cabane, shortfilm, 2022-currently</li>
+            </ul>
+          </div>
+          <div class="film flex column">
+            <h4>Festival selections</h4>
+            <ul>
+              <li>Ana + Yek, Film Fest Gent, 2024</li>
+              <li>Ana + Yek, Ji.hlava International Documentary Film Festival, Tsjechië, 2024</li>
+              <li>Ana + Yek, Millenium Festival, Brussel, 2025</li>
+            </ul>
+          </div>
+          <div class="film flex column">
+            <h4>Residency</h4>
+            <ul>
+              <li>Halaqat Audiovisual Residency in collaboration with Goethe-Institut and Bozar together with Atelier
+                Graphoui, Cinemaximiliaan and Sound Image Culture - SIC, Brussels, 2022</li>
+              <li>Residency for Audiovisual projects in collaboration with deAuteurs and De Letterie, Ostend, 2025</li>
+            </ul>
+          </div>
         </div>
-        <span>Education LUCA, Bachelor Fine Arts, Brussels, Belgium, 2012-2015
-          KASK, Master Installation, Ghent, Belgium, 2016-2018 KKH, Bachelor,
-          Stockholm, Erasmus, 2015</span>
+        <div class="exhibitions gap-20">
+          <h3>Exhibitions</h3>
+          <ul>
+            <li>NON STOP, Recyclart, Brussels, 2020</li>
+            <li>WALLPIECE, CC Strombeek, Strombeek, 2020</li>
+            <li>IN(EN)ACTING ROLES, SB34, Brussels, 2019</li>
+            <li>BY FIRE BY FORCE, Allkonstrummet, Stockholm, 2018</li>
+            <li>JEUDI DE LUMIERE, Espace0, Brussels, 2017</li>
+            <li>Festival, Open Bac Atelier, Bac Atelier, Leuven, 2017</li>
+            <li>ONE TOO MANY, Convent Art Space, Ghent, 2017</li>
+            <li>UNTITLED, Renault Factory, Brussels, 2016</li>
+            <li>BALTER, Het huis van de Mens, Brussels, 2015</li>
+            <li>LE MYTHE ACIDE DE LA CERISE ECLECTIQUE AU SALON SAUVAGE, Maison Des Arts, Brussels, 2015</li>
+            <li>STRANGE LOOPS, Congrès Station, Brussels, 2014</li>
+            <li>UN LIEU INDISPENSABLE AU QUESTIONNEMENT, Atelier Mommen, Brussels, 2013</li>
+          </ul>
+          <ul>
+            <li>Collaborations WALLPIECE, KelderKamerMuziek, CC Strombeek, 2020</li>
+            <li>Lost without my Things, Launch Chill Chair by Zigmund</li>
+            <li>PRONT, performance, MAD design, Brussels , 2019</li>
+            <li>Soup Sonnette, Festival Poisson-Évêque, performance, Brussels, 2017</li>
+            <li>SNEEUWLICHT a theater play by Heleen Desmet, Scenography, OPEK, Leuven, 2016</li>
+            <li>MORGENRÖTE, aurora borealis and Levantin: Into your solar</li>
+            <li>PLEXUS, Student group intervention, Kunsthalle Bern, Switzerland, 2015</li>
+            <li>CANARD, performance, Mechelen, 2015</li>
+          </ul>
+        </div>
       </div>
     </div>
   </div>
@@ -128,7 +260,7 @@
         <a href="../pages/about_us/">About us</a>
       </div>
       <div class="flex column gap-20 justify-between">
-        <a aria-label="contact" href="../pages/our_work/">Contact</a>
+        <a href="../pages/our_work/">Contact</a>
         <a href="mailto:#">zohra@gigifilms.be</a>
         <a href="mailto:#">romy@gigifilms.be</a>
         <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -153,6 +285,7 @@
       </svg>
     </div>
   </footer>
+  <script src="../../js/index.js"></script>
 </body>
 
 </html>
