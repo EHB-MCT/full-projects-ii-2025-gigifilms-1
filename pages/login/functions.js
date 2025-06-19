@@ -12,11 +12,11 @@ async function login() {
     location.href='../profile/'
   } catch (error) {
     try {
-      authData = await pb.collection('Regiseur').authWithPassword(
+      authData = await pb.collection('director').authWithPassword(
         localStorage.getItem("email"),
         localStorage.getItem("password")
       );
-      localStorage.setItem('userType', 'Regiseur');
+      localStorage.setItem('userType', 'director');
       localStorage.setItem("userID", authData.record.id);
       location.href='../profile/'
     } catch (error) {
