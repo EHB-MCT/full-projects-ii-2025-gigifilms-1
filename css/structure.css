@@ -110,6 +110,7 @@
     height: 25vh;
     aspect-ratio: 3/2;
     width: unset;
+    overflow: unset;
   }
 }
 .scrollsnap {
