@@ -88,6 +88,9 @@
 .justify-between {
   justify-content: space-between;
 }
+.justify-around {
+  justify-content: space-around;
+}
 .center {
   justify-self: center;
   align-self: center;
