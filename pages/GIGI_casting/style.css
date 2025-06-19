@@ -55,6 +55,10 @@ header * {
     color: var(--primary-text-color);
   }
 }
+.castingCall {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+}
 #casting_list {
   grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
 
@@ -176,19 +180,39 @@ header * {
 
 /* gigi casting actor */
 .projects {
-  .partUno {
-    max-width: 10%;
+  .column-3-7 > h3 {
     background-color: white;
     padding: 50px;
+    height: 100%;
+    min-height: 160px;
   }
-  .partDos {
+  .column-3-7 > div {
+    padding: 30px 20px;
     background-color: var(--primary-bg-color);
+    width: 100%;
+
     h3,
     h4,
     span {
       color: var(--primary-text-color);
     }
-    padding: 30px 20px;
+  }
+}
+.switch {
+  h2 {
+    position: relative;
+  }
+  h2.active::after {
+    background-color: var(--accent-color);
+  }
+  h2::after {
+    content: "";
+    position: absolute;
+    height: 5px;
+    bottom: -5px;
+    left: 0;
+    right: 0;
+    background-color: #fff;
   }
 }
 /* director */
@@ -201,7 +225,6 @@ header * {
   font-family: "Poppins", sans-serif;
 }
 .wrapper {
-  background-color: #fff;
   padding: 40px;
 }
 .container {
