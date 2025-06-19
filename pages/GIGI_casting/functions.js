@@ -55,6 +55,12 @@ if (localStorage.getItem('userType') == 'admin' || localStorage.getItem('userTyp
   slideTwo();
 }
 
+function castingCallBut(id) {
+  let text = "Signed up";
+  document.getElementById(id).innerHTML = text;
+  document.getElementById(id).classList.toggle("active");
+}
+
 function slideOne() {
   if (parseInt(sliderObject.sliderTwo.value) - parseInt(sliderObject.sliderOne.value) <= sliderObject.minGap) {
     sliderObject.sliderOne.value = parseInt(sliderObject.sliderTwo.value) - sliderObject.minGap;
