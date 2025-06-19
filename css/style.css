@@ -80,10 +80,7 @@ input:not([type="radio"], [type="checkbox"], [type="range"]) {
   width: 100%;
   box-sizing: border-box;
 }
-input:not([type="radio"], [type="checkbox"], [type="range"]):where(
-    :hover,
-    :focus-within
-  ),
+input:not([type="radio"], [type="checkbox"], [type="range"]):where(:hover,:focus-within),
 button:where(:active, .active, :hover, .hover) {
   background-color: var(--secondary-bg-color);
   color: var(--secondary-text-color);
